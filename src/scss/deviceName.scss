@@ -1,0 +1,52 @@
+@import '../breakpoints.scss';
+
+p.deviceName {
+	margin: 0;
+	padding: 0.3em;
+	z-index: 9999;
+	opacity: 0.7;
+	position: fixed;
+	font-size: calc(12px + 2vw);
+	background-color: rgb(177, 177, 177);
+	border-radius: 4%;
+}
+
+@include media("<=phone") {
+
+	//TODO Remove me for production
+	.deviceName::before {
+		content: 'phone';
+	}
+}
+
+@include media(">phone", "<=tablet") {
+
+	//TODO Remove me for production
+	.deviceName::before {
+		content: 'tablet';
+	}
+}
+
+@include media(">tablet", "<=desktop") {
+
+	//TODO Remove me for production
+	.deviceName::before {
+		content: 'desktop';
+	}
+}
+
+@include media(">desktop", "<=LGdesktop") {
+
+	//TODO Remove me for production
+	.deviceName::before {
+		content: 'LGdesktop';
+	}
+}
+
+@include media(">LGdesktop") {
+
+	//TODO Remove me for production
+	.deviceName::before {
+		content: 'Television';
+	}
+}

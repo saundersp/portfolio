@@ -1,0 +1,11 @@
+.work {
+	.heading {
+		text-align: left;
+	}
+
+	.work-content {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(13em, 1fr));
+		grid-gap: 1vw;
+	}
+}

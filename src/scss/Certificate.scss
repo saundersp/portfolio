@@ -1,0 +1,77 @@
+@import '../breakpoints.scss';
+
+.certificate {
+	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+
+	.certificateImage {
+		display: flex;
+		flex-direction: column;
+		width: inherit;
+		height: 3em;
+
+		img {
+			margin: auto;
+			height: inherit;
+			width: 100%;
+			object-fit: contain;
+		}
+
+		svg {
+			color: rgb(107, 107, 107);
+			width: 70%;
+			height: inherit;
+		}
+	}
+
+	h1 {
+		font-size: 0.7em;
+		text-align: center;
+	}
+
+	q {
+		font-family: 'Dancing Script', cursive;
+		font-weight: 500;
+		font-size: 0.8em;
+
+		&:before {
+			content: '- ';
+		}
+
+		&:after {
+			content: ' -';
+		}
+	}
+
+	ul {
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		list-style-type: none;
+		margin: 1vh 0;
+
+		li {
+			font-weight: 900;
+			padding: 0.2vw;
+			padding-bottom: 0;
+			margin: 0 0.4vw;
+			border: 3px solid rgba(91, 172, 204, 0.384);
+			border-radius: 10%;
+			font-size: 1.5em;
+
+			@include media(">=tablet") {
+				font-size: 0.9em;
+			}
+
+			a span {
+				font-size: 0.6em;
+				display: none;
+
+				@include media(">=tablet") {
+					display: inherit;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,75 @@
+@import '../breakpoints.scss';
+
+.project {
+	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+
+	.projectImage {
+		display: flex;
+		flex-direction: column;
+		width: inherit;
+		height: 13em;
+
+		a,
+		img {
+			height: inherit;
+			width: 100%;
+			object-fit: contain;
+		}
+
+		svg {
+			color: rgb(107, 107, 107);
+			width: 70%;
+			height: inherit;
+		}
+	}
+
+	h4 a {
+		padding: 0 0.7vw;
+
+		@include media(">=tablet") {
+
+			opacity: 0.5;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	h1 {
+		font-size: calc(12px + 1.3vw);
+	}
+
+	h2 {
+		font-size: calc(10px + 1vw);
+	}
+
+	ul {
+		padding-left: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		list-style-type: none;
+
+		li {
+			font-weight: 900;
+			padding: 0 0.8vw;
+			margin: 0 0.5vw 1vw;
+		}
+	}
+
+	.links {
+		margin-top: -1vw;
+
+		li a {
+			font-size: calc(10px + 1vw);
+		}
+	}
+
+	.techs li {
+		border: 1px solid rgba(255, 166, 0, 0.644);
+		border-radius: 10%;
+		font-size: calc(10px + 0.5vw);
+	}
+}

@@ -1,0 +1,51 @@
+@import '../breakpoints.scss';
+
+.about {
+	margin-top: 15vh;
+
+	.heading,
+	h1,
+	p {
+		text-align: left;
+	}
+
+	.about-content {
+		.description .certificates-content {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(18vw, 1fr));
+			grid-gap: 1vw;
+			margin-bottom: 2vh;
+		}
+
+		@include media(">=tablet") {
+			display: flex;
+
+			.description .certificates-content {
+				margin-bottom: initial;
+			}
+		}
+
+		img {
+			border-radius: 5%;
+
+			@include media("<tablet") {
+				width: 50vw;
+				height: 50vw;
+			}
+
+			@include media(">=tablet") {
+				float: right;
+				width: 30vw;
+				height: 30vw;
+				margin-left: 5vw;
+				margin-top: 3vh;
+			}
+
+			@include media(">=LGdesktop") {
+				width: 20vw;
+				height: 20vw;
+				margin-top: 1vh;
+			}
+		}
+	}
+}
