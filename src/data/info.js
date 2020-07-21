@@ -19,7 +19,6 @@ export default {
             <>Créons ensemble votre<br /><span className='amazing-color'>prochaine expérience</span></>,
             <>Let’s create your next<br /><span className='amazing-color'>experience together</span></>
         ],
-        // TODO Change to final github repo
         credits: [
             <>Site crée avec React <a target='_blank' rel="noopener noreferrer" href={'https://github.com/saundersp/portfolio'}> source</a></>,
             <>Made using React <a target='_blank' rel="noopener noreferrer" href={'https://github.com/saundersp/portfolio'}> Source Code</a></>

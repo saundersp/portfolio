@@ -1,14 +1,4 @@
 @import '../breakpoints.scss';
-@import './deviceName.scss';
-
-// TODO Remove me for production
-* {
-	//outline: 1px dashed red;
-
-	p.deviceName {
-		display: none;
-	}
-}
 
 body {
 	margin: 0;
