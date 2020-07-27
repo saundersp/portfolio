@@ -40,6 +40,10 @@ export default {
 		{
 			title: 'Music Theory Levels 1, 2 & 3',
 			author: 'Jason Allen'
+		},
+		{
+			title: 'Machine Learning A-Z Hands-On Python & R In Data Science',
+			author: 'SuperDataScience Team'
 		}
 	]
 };
