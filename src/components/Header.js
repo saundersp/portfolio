@@ -19,16 +19,16 @@ export default class Header extends Component {
 					<Navbar selectedLang={this.props.selectedLang} changeSelectedLang={this.props.changeSelectedLang}
 						navRef={this.props.navRef} menu={this.props.menu} />
 				</header>
-				<p className='header-title'>
-					<Fade bottom>
+				<Fade bottom>
+					<p className='header-title'>
 						{language.headerTagline[this.props.selectedLang].map(h => `${h}\n`)}
 						<button>
 							<Link to="contact" smooth={true} offset={-70} duration={500}>
 								{contact[this.props.selectedLang]}
 							</Link>
 						</button>
-					</Fade>
-				</p>
+					</p>
+				</Fade>
 				<div className="scrollIndicator">
 					<Link to="work" smooth={true} offset={-70} duration={500}>
 						<IoIosArrowDropdown />

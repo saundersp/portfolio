@@ -49,7 +49,7 @@ export default class Navbar extends Component {
 					</li>
 					<li className="langs">
 						{languages.map((lang, index) =>
-							<button onClick={_ => this.props.changeSelectedLang(index)}>
+							<button key={index} onClick={_ => this.props.changeSelectedLang(index)}>
 								<img src={`https://www.countryflags.io/${lang.code}/flat/64.png`} alt={lang.name} />
 							</button>
 						)}

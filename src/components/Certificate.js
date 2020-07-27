@@ -5,6 +5,8 @@ import { FaRegImage, FaRegFileImage, FaRegFilePdf } from 'react-icons/fa';
 
 export default class Certificate extends Component {
 
+	_isMounted = false;
+
 	state = {
 		imageLoadingError: false,
 		image: '', pdf: ''
@@ -15,11 +17,20 @@ export default class Certificate extends Component {
 		this.loadRessources(props.certificate.title);
 	}
 
+	componentDidMount() {
+		this._isMounted = true;
+	}
+
+	componentWillUnmount() {
+		this._isMounted = false;
+	}
+
 	loadRessources = async title => {
 		const [image, pdf] = await Promise.all(['jpg', 'pdf'].map(ext => new Promise(async resolve =>
 			resolve((await import(/* webpackMode: "eager" */ `./../data/certificates/${title}.${ext}`)).default)
 		)));
-		this.setState({ image, pdf });
+		if (this._isMounted)
+			this.setState({ image, pdf });
 	};
 
 	imgNotFound = _ => this.setState({ imageLoadingError: true });
