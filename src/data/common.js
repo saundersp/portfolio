@@ -44,6 +44,10 @@ export default {
 		{
 			title: 'Machine Learning A-Z Hands-On Python & R In Data Science',
 			author: 'SuperDataScience Team'
+		},
+		{
+			title: 'Deep Learning A-Z Hands-On Artificial Neural Networks',
+			author: 'SuperDataScience Team'
 		}
 	]
 };
