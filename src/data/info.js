@@ -97,13 +97,23 @@ export default {
 			techs: ["Javascript", "NodeJS"],
 			imageIcon: FaToolbox,
 			src: 'https://github.com/saundersp/ToolboxModule'
+		}, {
+			title: 'ESP32Manager',
+			desc: [
+				'Projet IOT pour configurer, gérer, et prédire des pannes de carte ESP32',
+				'IOT Project to manage, handle, and predicts anomalies on ESP32 boards'
+			],
+			service: 'IoT / Machine learning',
+			techs: ["VueJS", "Arduino", "Python"],
+			imageSrc: 'https://raw.githubusercontent.com/saundersp/ESP32Manager/master/front/src/assets/logo.png',
+			src: 'https://github.com/saundersp/ESP32Manager'
 		}
 		/*
 		{
-			name: '', // Name of the project
+			title: '', // Title of the project
 			desc: ['FRRRR', 'UKKKK'], // Description
-			service '', // Categorie of work (JS/ML ...)
-			tech: [], // List of technologies used (Javascript / Python ...)
+			service: '', // Categorie of work (JS/ML ...)
+			techs: [], // List of technologies used (Javascript / Python ...)
 			imageSrc: '', // Link to a representative image
 			src: '', // Github link / Source code
 			url: '' // Live demo [optional]
