@@ -47,7 +47,6 @@ export default class App extends Component {
 		return (
 			<div className="app" onClick={this.menu.hide}>
 				<Fade bottom cascade>
-					<p className="deviceName"></p>
 					<Header selectedLang={this.state.selectedLang} changeSelectedLang={this.changeSelectedLang}
 						navRef={this.state.navRef} menu={this.menu} />
 					<Work selectedLang={this.state.selectedLang} />

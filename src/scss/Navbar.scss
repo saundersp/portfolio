@@ -24,8 +24,8 @@ nav {
 		right: 0;
 		top: -3vh;
 		background-color: rgb(119, 119, 133);
-		padding: 3vh 0;
-		height: 52vh;
+		padding: 3vh 0 0 0;
+		height: 54vh;
 		list-style-type: none;
 		z-index: 1;
 		border-bottom-left-radius: 10%;
@@ -150,14 +150,18 @@ nav {
 			&.langs {
 				display: block;
 				position: absolute;
-				top: -1.5em;
-				left: 73vw;
+				top: -1.2em;
+				right: -3vw;
 				margin: 0;
-				padding-top: 0;
+				padding: 0;
 
 				button {
 					background: rgb(240, 239, 239);
-					margin: 0 1.5vw;
+					margin: 0;
+
+					&:first-child {
+						margin-right: 1.5vw;
+					}
 
 					img {
 						width: 4.5vw;
