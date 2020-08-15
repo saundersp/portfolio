@@ -14,6 +14,7 @@ export default {
 		work: ['Travaux', 'Work'],
 		contact: ['Contacter', 'Contact'],
 		liveDemo: ['Démo live', 'Live demo'],
+		download_link: ["Télécharger", "Download"],
 		CV: 'Curriculum vitæ',
 		approach: [
 			<>Créons ensemble votre<br /><span className='amazing-color'>prochaine expérience</span></>,
@@ -107,6 +108,15 @@ export default {
 			techs: ["VueJS", "Arduino", "Python"],
 			imageSrc: 'https://raw.githubusercontent.com/saundersp/ESP32Manager/master/front/src/assets/logo.png',
 			src: 'https://github.com/saundersp/ESP32Manager'
+		},
+		{
+			title: 'MarioSokoban',
+			desc: ['Un jeu de Sokoban sur le thème de Mario', 'A Mario\'s themed sokoban game'],
+			service: 'Video Game',
+			techs: ["C++"],
+			imageSrc: "https://raw.githubusercontent.com/saundersp/MarioSokoban/1.0/bin/data/menus/instructions_jeu.jpg",
+			src: 'https://github.com/saundersp/MarioSokoban',
+			download_url: 'https://github.com/saundersp/MarioSokoban/releases/download/1.0/MarioSokoban.zip'
 		}
 		/*
 		{
@@ -116,7 +126,8 @@ export default {
 			techs: [], // List of technologies used (Javascript / Python ...)
 			imageSrc: '', // Link to a representative image
 			src: '', // Github link / Source code
-			url: '' // Live demo [optional]
+			url: '', // Live demo [optional]
+			download_url: '' // Download link [optional]
 		}
 		*/
 	]
