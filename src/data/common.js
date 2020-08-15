@@ -26,28 +26,28 @@ export default {
 	],
 	certificates: [
 		{
-			title: 'Discrete Mathematics',
-			author: 'Miran Fattah'
-		},
-		{
-			title: 'Javascript ES6',
-			author: 'K.Sathyaprakash Reddy'
-		},
-		{
-			title: 'VueJS',
-			author: 'Enzo Ustariz'
-		},
-		{
-			title: 'Music Theory Levels 1, 2 & 3',
-			author: 'Jason Allen'
-		},
-		{
 			title: 'Machine Learning A-Z Hands-On Python & R In Data Science',
 			author: 'SuperDataScience Team'
 		},
 		{
 			title: 'Deep Learning A-Z Hands-On Artificial Neural Networks',
 			author: 'SuperDataScience Team'
+		},
+		{
+			title: 'Discrete Mathematics',
+			author: 'Miran Fattah'
+		},
+		{
+			title: 'VueJS',
+			author: 'Enzo Ustariz'
+		},
+		{
+			title: 'Javascript ES6',
+			author: 'K.Sathyaprakash Reddy'
+		},
+		{
+			title: 'Music Theory Levels 1, 2 & 3',
+			author: 'Jason Allen'
 		}
 	]
 };
