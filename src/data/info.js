@@ -41,6 +41,10 @@ export default {
 		<>Actuellement étudiant en 2ème année de Master MIAGE à Sophia-Antipolis. J'ai toujours été passionnée par l'informatique et ses possibilités.</>,
 		<>Currently a 2nd year Master MIAGE student in Sophia-Antipolis. I have always been fascinated about IT and its possibilities.</>
 	],
+	certificateAccordion: [
+		{ show: n => `Certificats (${n} en plus)`, hide: 'Cacher' },
+		{ show: n => `Certificates (${n} more)`, hide: 'Hide' }
+	],
 	projects: [
 		{
 			title: 'WGAN-GP',

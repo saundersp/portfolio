@@ -25,7 +25,6 @@ nav {
 		top: -3vh;
 		background-color: rgb(119, 119, 133);
 		padding: 3vh 0 0 0;
-		height: 54vh;
 		list-style-type: none;
 		z-index: 1;
 		border-bottom-left-radius: 10%;
@@ -55,22 +54,15 @@ nav {
 				padding-top: 1vh;
 
 				button {
-					cursor: pointer;
 					background-color: rgb(196, 196, 196);
 					border-radius: 30%;
 					margin: 0 2.5vw;
-					transition: opacity 0.2s ease-out;
-					-webkit-transition: opacity 0.2s ease-out;
-					-moz-transition: opacity 0.2s ease-out;
-					-ms-transition: opacity 0.2s ease-out;
-					-o-transition: opacity 0.2s ease-out;
-
-					&:hover {
-						opacity: 0.5;
-					}
+					padding: 4px 8px;
 
 					img {
+						min-width: 9vw;
 						width: 9vw;
+						min-height: 8vw;
 						height: 8vw;
 					}
 				}
@@ -164,7 +156,10 @@ nav {
 					}
 
 					img {
+						display: inherit;
+						min-width: 4.5vw;
 						width: 4.5vw;
+						min-height: 4vw;
 						height: 4vw;
 					}
 				}

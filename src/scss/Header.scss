@@ -2,7 +2,7 @@
 
 .App-header {
 	color: black;
-	height: 100vh;
+	height: 98vh;
 
 	h1.heading-background {
 		position: fixed;
@@ -44,20 +44,9 @@
 		}
 
 		button {
-			cursor: pointer;
 			background: black;
-			border: 0px;
 			padding: 1em 3em;
 			border-radius: 2%;
-			transition: opacity 0.2s ease-out;
-			-webkit-transition: opacity 0.2s ease-out;
-			-moz-transition: opacity 0.2s ease-out;
-			-ms-transition: opacity 0.2s ease-out;
-			-o-transition: opacity 0.2s ease-out;
-
-			&:hover {
-				opacity: 0.6;
-			}
 
 			a {
 				font-size: calc(10px + 3vw);
@@ -68,15 +57,18 @@
 	}
 
 	.scrollIndicator {
-		display: inline-block;
-		position: relative;
+		display: block;
+		position: absolute;
 		cursor: pointer;
-		top: 15vh;
 		font-size: calc(20px + 15vw);
+		bottom: 15vh;
+		text-align: center;
+		left: calc(50vw - (20px + 15vw)/2);
 
 		@include media(">=tablet") {
-			top: calc(1vh - 9vw);
-			font-size: 7vw;
+			font-size: 8vw;
+			left: 46vw;
+			bottom: 2vh;
 		}
 
 		animation: bounce 2s;

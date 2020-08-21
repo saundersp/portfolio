@@ -1,7 +1,7 @@
 @import '../breakpoints.scss';
 
 .about {
-	margin-top: 15vh;
+	margin-top: 8vh;
 
 	.heading,
 	h1,
@@ -10,19 +10,34 @@
 	}
 
 	.about-content {
-		.description .certificates-content {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(18vw, 1fr));
-			grid-gap: 1vw;
-			margin-bottom: 2vh;
+		.description {
+			.certificates-content {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+				grid-gap: 1vw;
+
+				@include media("<tablet") {
+					margin-bottom: 2vh;
+				}
+			}
+
+			button.showAllCertificates {
+				margin-bottom: 2vh;
+				width: 100%;
+				padding: 5px;
+
+				font-size: 20px;
+				background-color: #e7e7e746;
+				color: black;
+
+				svg {
+					margin: 0 5vw;
+				}
+			}
 		}
 
 		@include media(">=tablet") {
 			display: flex;
-
-			.description .certificates-content {
-				margin-bottom: initial;
-			}
 		}
 
 		img {
