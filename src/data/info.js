@@ -4,6 +4,7 @@ import FlappyIAImage from './images/FlappyIA.png';
 import JeuDeGoIAImage from './images/JeuDeGoIA.png';
 import GradientDescentImage from './images/GradientDescent.png';
 import WGANGPImage from './images/WGANGP.png';
+import EtudePopulationMondiale from './images/EtudePopulationMondiale.png';
 import CVFR from './CV Pierre Saunders - FR.pdf';
 import CVUK from './CV Pierre Saunders - UK.pdf';
 
@@ -92,7 +93,8 @@ export default {
 			imageSrc: GradientDescentImage,
 			src: 'https://github.com/saundersp/SimpleGradientDescent',
 			url: 'https://github.com/saundersp/SimpleGradientDescent/blob/master/Linear%20Regression.ipynb'
-		}, {
+		},
+		{
 			title: "ToolboxModule",
 			desc: [
 				'Module incluant plusieurs fonctions réutilisables pour divers projets',
@@ -102,7 +104,8 @@ export default {
 			techs: ["Javascript", "NodeJS"],
 			imageIcon: FaToolbox,
 			src: 'https://github.com/saundersp/ToolboxModule'
-		}, {
+		},
+		{
 			title: 'ESP32Manager',
 			desc: [
 				'Projet IOT pour configurer, gérer, et prédire des pannes de carte ESP32',
@@ -121,6 +124,15 @@ export default {
 			imageSrc: "https://raw.githubusercontent.com/saundersp/MarioSokoban/1.0/bin/data/menus/instructions_jeu.jpg",
 			src: 'https://github.com/saundersp/MarioSokoban',
 			download_url: 'https://github.com/saundersp/MarioSokoban/releases/download/1.0/MarioSokoban.zip'
+		},
+		{
+			title: 'EtudePopulationMondiale',
+			desc: ['Étude de l\'évolution de la population mondiale', 'Study on the evolution of the global population'], // Description
+			service: 'Data mining',
+			techs: ['R', 'Jupyter', 'tidyverse'],
+			imageSrc: EtudePopulationMondiale,
+			src: 'https://github.com/saundersp/EtudePopulationMondiale',
+			url: "https://github.com/saundersp/EtudePopulationMondiale/blob/master/%C3%89tude%20de%20l'%C3%A9volution%20de%20la%20population%20mondiale.ipynb"
 		}
 		/*
 		{
