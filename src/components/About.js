@@ -30,11 +30,11 @@ export default class About extends Component {
 							<p>{aboutText[selectedLang]}</p>
 							<button className="showAllCertificates" onClick={this.showAllCertificates}>
 								{showAllCertificates ? (<><BsChevronUp />{certificateAccordion[selectedLang].hide}<BsChevronUp /></>)
-									: (<><BsChevronDown />{certificateAccordion[selectedLang].show(certificates.length - 2)}<BsChevronDown /></>)}
+									: (<><BsChevronDown />{certificateAccordion[selectedLang].show(certificates.length - 3)}<BsChevronDown /></>)}
 							</button>
 							<div className="certificates-content">
 								{certificates.reduce((tab, certificate, index) => {
-									if (index < 2 || showAllCertificates)
+									if (index < 3 || showAllCertificates)
 										tab.push(<Certificate key={index} certificate={certificate} />);
 									return tab;
 								}, [])}

@@ -43,6 +43,10 @@
 			margin-top: 3vh;
 		}
 
+		@include media(">=1700px") {
+			margin-top: -6vh;
+		}
+
 		button {
 			background: black;
 			padding: 1em 3em;
