@@ -26,6 +26,10 @@ export default {
 	],
 	certificates: [
 		{
+			title: 'Artificial Intelligence A-Z Learn How To Build An AI',
+			author: 'SuperDataScience Team'
+		},
+		{
 			title: 'Machine Learning A-Z Hands-On Python & R In Data Science',
 			author: 'SuperDataScience Team'
 		},
