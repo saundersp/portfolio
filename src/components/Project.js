@@ -3,9 +3,25 @@ import Fade from 'react-reveal/Fade';
 import { FaGithub, FaRegPaperPlane, FaRegImage, FaDownload } from 'react-icons/fa';
 import '../scss/Project.scss';
 import language from '../data/info';
+import { IconType } from 'react-icons';
 const { liveDemo, download_link } = language.menu;
 
 export default class Project extends Component {
+	props: {
+		project: {
+			title: string,
+			service: string[],
+			desc: string[],
+			techs: string[],
+			imageIcon?: IconType,
+			imageSrc?: string,
+			url?: string,
+			download_url?: string,
+			src?: string,
+		},
+		selectedLang: string,
+	};
+
 	state = {
 		imageLoadingError: false
 	};

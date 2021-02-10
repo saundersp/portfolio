@@ -10,6 +10,13 @@ const { name } = common;
 const { contact } = language.menu;
 
 export default class Header extends Component {
+	props: {
+		selectedLang: string,
+		menu: any,
+		navRef: any,
+		changeSelectedLang(): void
+	};
+
 	render() {
 		return (
 			<div className="App-header">

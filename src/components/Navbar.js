@@ -10,6 +10,16 @@ const { home, work, about, contact } = language.menu;
 const { languages } = common;
 
 export default class Navbar extends Component {
+	props: {
+		menu: {
+			show(): void,
+			hide(): void
+		},
+		selectedLang: string,
+		navRef: any,
+		changeSelectedLang: Function
+	};
+
 	render() {
 		return (
 			<nav>

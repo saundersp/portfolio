@@ -8,6 +8,10 @@ const { approach, contact, CV } = language.menu;
 const { CV: CVlink } = language;
 
 export default class Contact extends Component {
+	props: {
+		selectedLang: string
+	};
+
 	render() {
 		return (
 			<Fade bottom cascade>

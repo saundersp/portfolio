@@ -10,6 +10,10 @@ const { aboutText, menu, certificateAccordion } = language;
 
 
 export default class About extends Component {
+	props: {
+		selectedLang: any
+	};
+
 	state = {
 		imageLoadingError: false,
 		showAllCertificates: false

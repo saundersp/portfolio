@@ -4,6 +4,12 @@ import '../scss/Certificate.scss';
 import { FaRegImage, FaRegFileImage, FaRegFilePdf } from 'react-icons/fa';
 
 export default class Certificate extends Component {
+	props: {
+		certificate: {
+			title: string,
+			author: string,
+		}
+	};
 
 	_isMounted = false;
 

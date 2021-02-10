@@ -6,6 +6,10 @@ import language from '../data/info';
 const { work } = language.menu;
 
 export default class Work extends Component {
+	props: {
+		selectedLang: string
+	};
+
 	render() {
 		return (
 			<Fade bottom cascade>
