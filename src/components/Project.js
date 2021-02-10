@@ -42,7 +42,7 @@ export default class Project extends Component {
 						</a>
 					</div>
 					<h1>{title}</h1>
-					<h2>{service}</h2>
+					<h2>{service[this.props.selectedLang]}</h2>
 					<p>{desc[this.props.selectedLang]}</p>
 					<ul className="techs">
 						{techs.map((tech, i) => (<li key={i}>{tech}</li>))}

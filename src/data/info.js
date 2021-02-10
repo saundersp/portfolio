@@ -22,8 +22,8 @@ export default {
 			<>Let’s create your next<br /><span className='amazing-color'>experience together</span></>
 		],
 		credits: [
-			<>Site crée avec React <a target='_blank' rel="noopener noreferrer" href={'https://github.com/saundersp/portfolio'}> source</a></>,
-			<>Made using React <a target='_blank' rel="noopener noreferrer" href={'https://github.com/saundersp/portfolio'}> Source Code</a></>
+			<>Site crée avec React, <a target='_blank' rel="noopener noreferrer" href={'https://github.com/saundersp/portfolio'}> Code Source</a></>,
+			<>Made using React, <a target='_blank' rel="noopener noreferrer" href={'https://github.com/saundersp/portfolio'}> Source Code</a></>
 		]
 	},
 	headerTagline: [
@@ -49,18 +49,18 @@ export default {
 	projects: [
 		{
 			title: 'WGAN-GP',
-			service: 'Deep learning',
+			service: ['Apprentissage profond', 'Deep learning'],
 			desc: [
 				'Implémentation du Wasserstein GAN avec pénalité de gradient',
 				'Implemenation of the Wasserstein GAN with gradient penalty'
 			],
 			techs: ["Python", "Tensorflow"],
 			imageSrc: WGANGPImage,
-			src: 'https://github.com/saundersp/wgan-gp'
+			src: 'https://github.com/saundersp/wgan-gp',
 		},
 		{
 			title: 'FlappAI',
-			service: 'Reinforcement learning (N.E.A.T)',
+			service: ['Algorithme génétique', 'Genetic algorithm'],
 			desc: [
 				'IA jouant à Flappy bird',
 				'AI Playing Flappy bird'
@@ -68,80 +68,81 @@ export default {
 			techs: ["HTML", "CSS", "Javascript"],
 			imageSrc: FlappyIAImage,
 			url: 'https://saundersp.github.io/FlappAI/',
-			src: 'https://github.com/saundersp/FlappAI'
+			src: 'https://github.com/saundersp/FlappAI',
 		},
 		{
 			title: 'JeuDeGoIA',
-			service: 'MinMax',
+			service: ['MinMax', 'MinMax'],
 			desc: [
 				'Implémentation d\'une IA jouant au jeu de Go',
 				'Implementation of an AI playing Go'
 			],
 			techs: ["HTML", "CSS", "Javascript"],
 			imageSrc: JeuDeGoIAImage,
+			src: 'https://github.com/saundersp/JeuDeGoIA',
 			url: 'https://saundersp.github.io/JeuDeGoIA/',
-			src: 'https://github.com/saundersp/JeuDeGoIA'
 		},
 		{
 			title: 'SimpleGradientDescent',
+			service: ['Apprentissage profond', 'Deep learning'],
 			desc: [
 				'Implémentation d\'une descente de gradient avec diverses technique d\'optimisation',
 				'Implementation of gradient descent with differents optimisation techniques'
 			],
-			service: 'Deep Learning',
 			techs: ["Python", "Jupyter", "Numpy", "Matplotlib"],
 			imageSrc: GradientDescentImage,
 			src: 'https://github.com/saundersp/SimpleGradientDescent',
-			url: 'https://github.com/saundersp/SimpleGradientDescent/blob/master/Linear%20Regression.ipynb'
+			url: 'https://github.com/saundersp/SimpleGradientDescent/blob/master/Linear%20Regression.ipynb',
 		},
 		{
 			title: "ToolboxModule",
+			service: ['Module Javascript', 'Javascript module'],
 			desc: [
 				'Module incluant plusieurs fonctions réutilisables pour divers projets',
 				'Module including several functions reusable for various projects'
 			],
-			service: 'Javascript module',
 			techs: ["Javascript", "NodeJS"],
 			imageIcon: FaToolbox,
-			src: 'https://github.com/saundersp/ToolboxModule'
+			src: 'https://github.com/saundersp/ToolboxModule',
 		},
 		{
 			title: 'ESP32Manager',
+			service: ['Iot / Apprentissage automatique', 'IoT / Machine learning'],
 			desc: [
 				'Projet IOT pour configurer, gérer, et prédire des pannes de carte ESP32',
 				'IOT Project to manage, handle, and predicts anomalies on ESP32 boards'
 			],
-			service: 'IoT / Machine learning',
 			techs: ["VueJS", "Arduino", "Python"],
 			imageSrc: 'https://raw.githubusercontent.com/saundersp/ESP32Manager/master/front/src/assets/logo.png',
-			src: 'https://github.com/saundersp/ESP32Manager'
+			src: 'https://github.com/saundersp/ESP32Manager',
 		},
 		{
 			title: 'MarioSokoban',
+			service: ['Jeu vidéo', 'Video Game'],
 			desc: ['Un jeu de Sokoban sur le thème de Mario', 'A Mario\'s themed sokoban game'],
-			service: 'Video Game',
 			techs: ["C++"],
-			imageSrc: "https://raw.githubusercontent.com/saundersp/MarioSokoban/1.0/bin/data/menus/instructions_jeu.jpg",
+			imageSrc: "https://raw.githubusercontent.com/saundersp/MarioSokoban/master/bin/data/menus/instructions_jeu.png",
 			src: 'https://github.com/saundersp/MarioSokoban',
 			download_url: 'https://github.com/saundersp/MarioSokoban/releases/download/1.0/MarioSokoban.zip'
 		},
 		{
 			title: 'EtudePopulationMondiale',
+			service: ['Exploration de données', 'Data mining'],
 			desc: ['Étude de l\'évolution de la population mondiale', 'Study on the evolution of the global population'], // Description
-			service: 'Data mining',
 			techs: ['R', 'Jupyter', 'tidyverse'],
 			imageSrc: EtudePopulationMondiale,
 			src: 'https://github.com/saundersp/EtudePopulationMondiale',
-			url: "https://github.com/saundersp/EtudePopulationMondiale/blob/master/%C3%89tude%20de%20l'%C3%A9volution%20de%20la%20population%20mondiale.ipynb"
+			url: "https://github.com/saundersp/EtudePopulationMondiale/blob/master/%C3%89tude%20de%20l'%C3%A9volution%20de%20la%20population%20mondiale.ipynb",
 		}
 		/*
 		{
 			title: '', // Title of the project
-			desc: ['FRRRR', 'UKKKK'], // Description
-			service: '', // Categorie of work (JS/ML ...)
+			service: ['FR', 'UK'], // Category of work (JS/ML ...)
+			desc: ['FR', 'UK'], // Description
 			techs: [], // List of technologies used (Javascript / Python ...)
-			imageSrc: '', // Link to a representative image
-			src: '', // Github link / Source code
+			imageSrc: '', // Link to a representative image [optional]
+			imageIcon: , // Reflect F.A Icon object [optional]
+			src: '', // Github link / Source code [optional]
 			url: '', // Live demo [optional]
 			download_url: '' // Download link [optional]
 		}
