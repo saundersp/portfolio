@@ -4,7 +4,7 @@ import '../scss/Contact.scss';
 import { FaRegFilePdf } from 'react-icons/fa';
 import language from '../data/info';
 import common from '../data/common';
-const { approach, contact, CV } = language.menu;
+const { contact, CV } = language.menu;
 const { CV: CVlink } = language;
 
 export default class Contact extends Component {
@@ -18,7 +18,6 @@ export default class Contact extends Component {
 				<div className="contact">
 					<h1>{contact[this.props.selectedLang]}</h1>
 					<div className='contact-content'>
-						<h3>{approach[this.props.selectedLang]}</h3>
 						<ul>
 							{common.social.map((link, index) => (
 								<li key={index}>

@@ -17,10 +17,6 @@ export default {
 		liveDemo: ['Démo live', 'Live demo'],
 		download_link: ["Télécharger", "Download"],
 		CV: 'Curriculum vitæ',
-		approach: [
-			<>Créons ensemble votre<br /><span className='amazing-color'>prochaine expérience</span></>,
-			<>Let’s create your next<br /><span className='amazing-color'>experience together</span></>
-		],
 		credits: [
 			<>Site crée avec React, <a target='_blank' rel="noopener noreferrer" href={'https://github.com/saundersp/portfolio'}> Code Source</a></>,
 			<>Made using React, <a target='_blank' rel="noopener noreferrer" href={'https://github.com/saundersp/portfolio'}> Source Code</a></>
