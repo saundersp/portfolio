@@ -1,4 +1,4 @@
-import React, { Component, createRef } from 'react'
+import React, { useState, useRef } from 'react'
 import './scss/App.scss';
 import Header from './components/Header';
 import About from './components/About';
@@ -8,55 +8,44 @@ import Fade from 'react-reveal/Fade';
 import data from './data/info';
 const { credits } = data.menu;
 
-export default class App extends Component {
+export default function App() {
+	const [navOpened, setNavOpened] = useState(false);
+	const [selectedLang, setSelectedLang] = useState(0);
+	const navRef = useRef(null);
 
-	state = {
-		navOpened: false,
-		selectedLang: 0,
-		navRef: createRef()
-	}
-
-	menu = {
+	const menu = {
 		show: e => {
-			if (!this.state.navOpened) {
-				const cl = this.state.navRef.current.classList;
-				cl.remove("hide-menu");
-				cl.add("show-menu");
+			if (!navOpened) {
+				const cl = navRef.current.classList;
+				cl.remove('hide-menu');
+				cl.add('show-menu');
 				e.stopPropagation();
-				this.setState({ navOpened: true });
+				setNavOpened(true);
 			}
 		},
 
 		hide: e => {
-			if (this.state.navOpened) {
-				const cl = this.state.navRef.current.classList;
-				cl.remove("show-menu");
-				cl.add("hide-menu");
-				setTimeout(_ => cl.remove("hide-menu"), 600);
+			if (navOpened) {
+				const cl = navRef.current.classList;
+				cl.remove('show-menu');
+				cl.add('hide-menu');
+				setTimeout(_ => cl.remove('hide-menu'), 600);
 				e.stopPropagation();
-				this.setState({ navOpened: false });
+				setNavOpened(false);
 			}
 		}
-	}
-
-	changeSelectedLang = index => {
-		this.setState({ selectedLang: index });
 	};
 
-	render() {
-		return (
-			<div className="app" onClick={this.menu.hide}>
-				<Fade bottom cascade>
-					<Header selectedLang={this.state.selectedLang} changeSelectedLang={this.changeSelectedLang}
-						navRef={this.state.navRef} menu={this.menu} />
-					<Work selectedLang={this.state.selectedLang} />
-					<About selectedLang={this.state.selectedLang} />
-					<Contact selectedLang={this.state.selectedLang} />
-					<div className='footer'>
-						<p>{credits[this.state.selectedLang]}</p>
-					</div>
-				</Fade>
-			</div>
-		)
-	}
-}
+	return (
+		<div className='app' onClick={menu.hide}>
+			<Fade bottom cascade>
+				<Header selectedLang={selectedLang} changeSelectedLang={setSelectedLang}
+					navRef={navRef} menu={menu} />
+				<Work selectedLang={selectedLang} />
+				<About selectedLang={selectedLang} />
+				<Contact selectedLang={selectedLang} />
+				<div className='footer'><p>{credits[selectedLang]}</p></div>
+			</Fade>
+		</div>
+	);
+};

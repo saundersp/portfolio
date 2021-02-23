@@ -1,59 +1,55 @@
-import React, { Component } from 'react';
-import Fade from 'react-reveal/Fade';
+import React, { createElement, useState } from 'react';
 import { FaGithub, FaRegPaperPlane, FaRegImage, FaDownload } from 'react-icons/fa';
+import { IconType } from 'react-icons';
+import Fade from 'react-reveal/Fade';
 import '../scss/Project.scss';
 import language from '../data/info';
-import { IconType } from 'react-icons';
 const { liveDemo, download_link } = language.menu;
 
-export default class Project extends Component {
-	props: {
-		project: {
-			title: string,
-			service: string[],
-			desc: string[],
-			techs: string[],
-			imageIcon?: IconType,
-			imageSrc?: string,
-			url?: string,
-			download_url?: string,
-			src?: string,
-		},
-		selectedLang: string,
-	};
+type ProjetProps = {
+	project: {
+		title: string,
+		service: string[],
+		desc: string[],
+		techs: string[],
+		imageIcon?: IconType,
+		imageSrc?: string,
+		url?: string,
+		download_url?: string,
+		src?: string
+	},
+	selectedLang: number
+};
+export default function Project({ project, selectedLang }: ProjetProps) {
+	const [imageLoadingError, setImageLoadingError] = useState(false);
 
-	state = {
-		imageLoadingError: false
-	};
+	const { url, imageSrc, title, service, desc, src, techs, download_url, imageIcon } = project;
+	const image = imageSrc ?
+		<img decoding='async' src={imageSrc} alt={title} onError={_ => setImageLoadingError(true)} />
+		: createElement(imageIcon);
 
-	imgNotFound = _ => this.setState({ imageLoadingError: true });
+	const createLink = (tag, href, title) => (
+		<li><a target='_blank' rel='noopener noreferrer' href={href}>{createElement(tag)} {title}</a></li>
+	);
 
-	render() {
-		const { url, imageSrc, title, service, desc, src, techs, download_url } = this.props.project;
-		const image = imageSrc ?
-			<img decoding="async" src={imageSrc} alt={title} onError={this.imgNotFound} />
-			: <this.props.project.imageIcon />;
-		return (
-			<Fade bottom cascade>
-				<div className='project'>
-					<div className="projectImage">
-						<a target='_blank' rel="noopener noreferrer" href={url || src || '#'}>
-							{!this.state.imageLoadingError ? image : <FaRegImage />}
-						</a>
-					</div>
-					<h1>{title}</h1>
-					<h2>{service[this.props.selectedLang]}</h2>
-					<p>{desc[this.props.selectedLang]}</p>
-					<ul className="techs">
-						{techs.map((tech, i) => (<li key={i}>{tech}</li>))}
-					</ul>
-					<ul className="links">
-						{url && (<li><a target='_blank' rel="noopener noreferrer" href={url}><FaRegPaperPlane /> {liveDemo[this.props.selectedLang]}</a></li>)}
-						{download_url && (<li><a target='_blank' rel="noopener noreferrer" href={download_url}><FaDownload /> {download_link[this.props.selectedLang]}</a></li>)}
-						{src && (<li><a target='_blank' rel="noopener noreferrer" href={src}><FaGithub /> Source</a></li>)}
-					</ul>
+	return (
+		<Fade bottom cascade>
+			<div className='project'>
+				<div className='projectImage'>
+					<a target='_blank' rel='noopener noreferrer' href={url || src || '#'}>
+						{!imageLoadingError ? image : <FaRegImage />}
+					</a>
 				</div>
-			</Fade>
-		);
-	}
+				<h1>{title}</h1>
+				<h2>{service[selectedLang]}</h2>
+				<p>{desc[selectedLang]}</p>
+				<ul className='techs'>{techs.map((tech, i) => (<li key={i}>{tech}</li>))}</ul>
+				<ul className='links'>
+					{url && (createLink(FaRegPaperPlane, url, liveDemo[selectedLang]))}
+					{download_url && (createLink(FaDownload, download_url, download_link[selectedLang]))}
+					{src && (createLink(FaGithub, src, 'Source'))}
+				</ul>
+			</div>
+		</Fade>
+	);
 };

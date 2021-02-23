@@ -1,64 +1,54 @@
-import React, { Component } from 'react';
+import React, { createElement, useState, useEffect } from 'react';
+import { FaRegImage, FaRegFileImage, FaRegFilePdf } from 'react-icons/fa';
 import Fade from 'react-reveal/Fade';
 import '../scss/Certificate.scss';
-import { FaRegImage, FaRegFileImage, FaRegFilePdf } from 'react-icons/fa';
 
-export default class Certificate extends Component {
-	props: {
-		certificate: {
-			title: string,
-			author: string,
-		}
-	};
+const loadResource = (title, ext) => new Promise(async resolve =>
+	resolve((await import(/* webpackMode: 'eager' */ `./../data/certificates/${title}.${ext}`)).default)
+);
 
-	_isMounted = false;
-
-	state = {
-		imageLoadingError: false,
-		image: '', pdf: ''
-	};
-
-	constructor(props) {
-		super(props);
-		this.loadRessources(props.certificate.title);
+type CertificateProps = {
+	certificate: {
+		title: string,
+		author: string
 	}
+};
+export default function Certificate({ certificate }: CertificateProps) {
+	const { title, author } = certificate;
+	const [imageLoadingError, setImageLoadingError] = useState(false);
+	const [image, setImage] = useState('');
+	const [pdf, setPdf] = useState('');
 
-	componentDidMount() {
-		this._isMounted = true;
-	}
+	useEffect(() => {
+		let isMounted = true;
+		(async () => {
+			const [image, pdf] = await Promise.all(['jpg', 'pdf'].map(ext => loadResource(title, ext)));
+			if (isMounted) {
+				setImage(image);
+				setPdf(pdf);
+			}
+		})();
+		return () => isMounted = false;
+	}, [title]);
 
-	componentWillUnmount() {
-		this._isMounted = false;
-	}
+	const createLink = (tag, href, title) => (
+		<a target='_blank' rel='noopener noreferrer' href={href}>{createElement(tag)}<span> {title}</span></a>
+	);
 
-	loadRessources = async title => {
-		const [image, pdf] = await Promise.all(['jpg', 'pdf'].map(ext => new Promise(async resolve =>
-			resolve((await import(/* webpackMode: "eager" */ `./../data/certificates/${title}.${ext}`)).default)
-		)));
-		if (this._isMounted)
-			this.setState({ image, pdf });
-	};
-
-	imgNotFound = _ => this.setState({ imageLoadingError: true });
-
-	render() {
-		const { title, author } = this.props.certificate;
-		return (
-			<Fade bottom cascade>
-				<div className='certificate'>
-					<a className="certificateImage" target='_blank' rel="noopener noreferrer" href={this.state.image}>
-						{!this.state.imageLoadingError ?
-							<img decoding="async" src={this.state.image} alt={title} onError={this.imgNotFound} />
-							: <FaRegImage />}
-					</a>
-					<h1>{title}</h1>
-					<q>{author}</q>
-					<ul>
-						<li><a target='_blank' rel="noopener noreferrer" href={this.state.image}><FaRegFileImage /><span> JPG</span></a></li>
-						<li><a target='_blank' rel="noopener noreferrer" href={this.state.pdf}><FaRegFilePdf /><span> PDF</span></a></li>
-					</ul>
-				</div>
-			</Fade>
-		);
-	}
+	return (
+		<Fade bottom cascade>
+			<div className='certificate'>
+				<a className='certificateImage' target='_blank' rel='noopener noreferrer' href={image}>
+					{!imageLoadingError ?
+						<img decoding='async' src={image} alt={title} onError={_ => setImageLoadingError(true)} />
+						: <FaRegImage />}
+				</a>
+				<h1>{title}</h1><q>{author}</q>
+				<ul>
+					<li>{createLink(FaRegFileImage, image, 'JPG')}</li>
+					<li>{createLink(FaRegFilePdf, pdf, 'PDF')}</li>
+				</ul>
+			</div>
+		</Fade>
+	);
 };
