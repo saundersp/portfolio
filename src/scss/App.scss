@@ -22,9 +22,20 @@ body {
 			margin: 0.1vh 0;
 			border-top: 1px solid black;
 			position: relative;
-			font-size: calc(8px + 2vw);
-			left: 25vw;
-			width: 40vw;
+			font-size: calc(16px + 1vw);
+			left: 22.5vw;
+			width: 45vw;
+
+			@include media(">=700px", "<=952px") {
+				left: 15vw;
+				width: 55vw;
+			}
+
+			@include media("<=700px") {
+				left: 15vw;
+				width: 55vw;
+				font-size: calc(8px + 1vw);
+			}
 		}
 	}
 
