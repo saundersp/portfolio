@@ -2,32 +2,27 @@ import React, { useState } from 'react';
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
 import Fade from 'react-reveal/Fade';
 import '../scss/About.scss';
-import language from '../data/info';
 import common from '../data/common';
 import Certificate from './Certificate';
+import { useLang } from '../services/LanguageService';
 const { aboutImage, name, certificates } = common;
-const { aboutText, menu, certificateAccordion } = language;
 
-type AboutProps = {
-	selectedLang: number
-};
-export default function About({ selectedLang }: AboutProps) {
+export default function About() {
+	const { t } = useLang();
 	const [imageLoadingError, setImageLoadingError] = useState(false);
 	const [showAllCertificates, setShowAllCertificates] = useState(false);
-
-	const imgNotFound = _ => setImageLoadingError(true);
-	const toogleShowAllCertificates = _ => setShowAllCertificates(!showAllCertificates);
+	const { hide, show } = t("certificateAccordion");
 
 	return (
 		<Fade bottom cascade>
 			<div className='about'>
-				<h1 className='heading'>{menu.about[selectedLang]}</h1>
+				<h1 className='heading'>{t('menu.about')}</h1>
 				<div className='about-content'>
 					<div className='description'>
-						<p>{aboutText[selectedLang]}</p>
-						<button className='showAllCertificates' onClick={toogleShowAllCertificates}>
-							{showAllCertificates ? (<><BsChevronUp />{certificateAccordion[selectedLang].hide}<BsChevronUp /></>)
-								: (<><BsChevronDown />{certificateAccordion[selectedLang].show(certificates.length - 3)}<BsChevronDown /></>)}
+						<p>{t('aboutText')}</p>
+						<button className='showAllCertificates' onClick={_ => setShowAllCertificates(!showAllCertificates)}>
+							{showAllCertificates ? (<><BsChevronUp />{hide}<BsChevronUp /></>)
+								: (<><BsChevronDown />{show(certificates.length - 3)}<BsChevronDown /></>)}
 						</button>
 						<div className='certificates-content'>
 							{certificates.reduce((tab, certificate, index) => {
@@ -38,9 +33,9 @@ export default function About({ selectedLang }: AboutProps) {
 						</div>
 					</div>
 					{(aboutImage && !imageLoadingError) &&
-						<img decoding='async' src={aboutImage} alt={name} onError={imgNotFound} />}
+						<img decoding='async' src={aboutImage} alt={name} onError={_ => setImageLoadingError(true)} />}
 				</div>
 			</div>
 		</Fade >
 	);
-};
+}

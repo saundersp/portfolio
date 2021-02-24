@@ -1,37 +1,35 @@
-import React, { Dispatch, SetStateAction } from 'react';
+import React, { MouseEvent } from 'react';
 import { IoIosArrowDropdown } from 'react-icons/io';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
 import '../scss/Header.scss';
+import { useLang } from '../services/LanguageService';
 import common from '../data/common';
-import language from '../data/info';
 import Navbar from './Navbar';
 const { name } = common;
-const { contact } = language.menu;
 
 type HeaderProps = {
-	selectedLang: number,
 	menu: {
-		show(e: any): void,
-		hide(e: any): void
+		show(e: MouseEvent): void,
+		hide(e: MouseEvent): void,
+		navRef: any
 	},
-	navRef: any,
-	changeSelectedLang: Dispatch<SetStateAction<number>>
 };
-export default function Header({ selectedLang, menu, navRef, changeSelectedLang }: HeaderProps) {
+export default function Header({ menu }: HeaderProps) {
+	const { t } = useLang();
 	return (
 		<div className='App-header'>
 			<h1 className='heading-background'>CREATIVE</h1>
 			<header>
 				<h1><Fade bottom cascade>{name}</Fade></h1>
-				<Navbar selectedLang={selectedLang} changeSelectedLang={changeSelectedLang} navRef={navRef} menu={menu} />
+				<Navbar menu={menu} />
 			</header>
 			<Fade bottom>
 				<p className='header-title'>
-					{language.headerTagline[selectedLang].map(h => `${h}\n`)}
+					{t('headerTagline').map(h => `${h}\n`)}
 					<button>
 						<Link to='contact' smooth={true} offset={-70} duration={500}>
-							{contact[selectedLang]}
+							{t('menu.contact')}
 						</Link>
 					</button>
 				</p>
@@ -43,4 +41,4 @@ export default function Header({ selectedLang, menu, navRef, changeSelectedLang 
 			</div>
 		</div >
 	);
-};
+}

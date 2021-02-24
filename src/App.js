@@ -1,22 +1,19 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, MouseEvent } from 'react'
 import './scss/App.scss';
 import Header from './components/Header';
 import About from './components/About';
 import Work from './components/Work';
 import Contact from './components/Contact';
 import Fade from 'react-reveal/Fade';
-import data from './data/info';
-const { credits } = data.menu;
+import LanguageService from './services/LanguageService';
 
 export default function App() {
 	const [navOpened, setNavOpened] = useState(false);
-	const [selectedLang, setSelectedLang] = useState(0);
-	const navRef = useRef(null);
 
 	const menu = {
-		show: e => {
+		show: (e: MouseEvent): void => {
 			if (!navOpened) {
-				const cl = navRef.current.classList;
+				const cl = menu.navRef.current.classList;
 				cl.remove('hide-menu');
 				cl.add('show-menu');
 				e.stopPropagation();
@@ -24,28 +21,29 @@ export default function App() {
 			}
 		},
 
-		hide: e => {
+		hide: (e: MouseEvent): void => {
 			if (navOpened) {
-				const cl = navRef.current.classList;
+				const cl = menu.navRef.current.classList;
 				cl.remove('show-menu');
 				cl.add('hide-menu');
 				setTimeout(_ => cl.remove('hide-menu'), 600);
 				e.stopPropagation();
 				setNavOpened(false);
 			}
-		}
+		},
+		navRef: useRef(null)
 	};
 
 	return (
-		<div className='app' onClick={menu.hide}>
-			<Fade bottom cascade>
-				<Header selectedLang={selectedLang} changeSelectedLang={setSelectedLang}
-					navRef={navRef} menu={menu} />
-				<Work selectedLang={selectedLang} />
-				<About selectedLang={selectedLang} />
-				<Contact selectedLang={selectedLang} />
-				<div className='footer'><p>{credits[selectedLang]}</p></div>
-			</Fade>
-		</div>
+		<LanguageService>
+			<div className='app' onClick={menu.hide}>
+				<Fade bottom cascade>
+					<Header menu={menu} />
+					<Work />
+					<About />
+					<Contact />
+				</Fade>
+			</div>
+		</LanguageService>
 	);
-};
+}

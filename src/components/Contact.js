@@ -2,23 +2,19 @@ import React, { createElement } from 'react';
 import Fade from 'react-reveal/Fade';
 import { FaRegFilePdf } from 'react-icons/fa';
 import '../scss/Contact.scss';
-import language from '../data/info';
 import common from '../data/common';
-const { contact, CV } = language.menu;
-const { CV: CVlink } = language;
+import { useLang } from '../services/LanguageService';
 
 const createLink = (tag, href, title) => (
 	<a target='_blank' rel='noopener noreferrer' href={href}>{createElement(tag)} {title}</a>
 );
 
-type ContactProps = {
-	selectedLang: number
-};
-export default function Contact({ selectedLang }: ContactProps) {
+export default function Contact() {
+	const { t } = useLang();
 	return (
 		<Fade bottom cascade>
 			<div className='contact'>
-				<h1>{contact[selectedLang]}</h1>
+				<h1>{t('menu.contact')}</h1>
 				<div className='contact-content'>
 					<ul>
 						{common.social.map((link, index) => (
@@ -28,10 +24,11 @@ export default function Contact({ selectedLang }: ContactProps) {
 								</a>
 							</li>
 						))}
-						<li>{createLink(FaRegFilePdf, CVlink[selectedLang], CV)}</li>
+						<li>{createLink(FaRegFilePdf, t('CV'), t('menu.CV'))}</li>
 					</ul>
 				</div>
 			</div>
+			<div className='footer'><p>{t('menu.credits')}</p></div>
 		</Fade>
 	);
-};
+}

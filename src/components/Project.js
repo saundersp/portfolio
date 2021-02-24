@@ -3,8 +3,7 @@ import { FaGithub, FaRegPaperPlane, FaRegImage, FaDownload } from 'react-icons/f
 import { IconType } from 'react-icons';
 import Fade from 'react-reveal/Fade';
 import '../scss/Project.scss';
-import language from '../data/info';
-const { liveDemo, download_link } = language.menu;
+import { useLang } from '../services/LanguageService';
 
 type ProjetProps = {
 	project: {
@@ -17,10 +16,9 @@ type ProjetProps = {
 		url?: string,
 		download_url?: string,
 		src?: string
-	},
-	selectedLang: number
+	}
 };
-export default function Project({ project, selectedLang }: ProjetProps) {
+export default function Project({ project }: ProjetProps) {
 	const [imageLoadingError, setImageLoadingError] = useState(false);
 
 	const { url, imageSrc, title, service, desc, src, techs, download_url, imageIcon } = project;
@@ -31,6 +29,8 @@ export default function Project({ project, selectedLang }: ProjetProps) {
 	const createLink = (tag, href, title) => (
 		<li><a target='_blank' rel='noopener noreferrer' href={href}>{createElement(tag)} {title}</a></li>
 	);
+	const { t, getLangIndex } = useLang();
+	const selectedLang = getLangIndex();
 
 	return (
 		<Fade bottom cascade>
@@ -45,11 +45,11 @@ export default function Project({ project, selectedLang }: ProjetProps) {
 				<p>{desc[selectedLang]}</p>
 				<ul className='techs'>{techs.map((tech, i) => (<li key={i}>{tech}</li>))}</ul>
 				<ul className='links'>
-					{url && (createLink(FaRegPaperPlane, url, liveDemo[selectedLang]))}
-					{download_url && (createLink(FaDownload, download_url, download_link[selectedLang]))}
+					{url && (createLink(FaRegPaperPlane, url, t('menu.liveDemo')))}
+					{download_url && (createLink(FaDownload, download_url, t('menu.download_link')))}
 					{src && (createLink(FaGithub, src, 'Source'))}
 				</ul>
 			</div>
 		</Fade>
 	);
-};
+}
