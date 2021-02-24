@@ -51,4 +51,4 @@ export default function Certificate({ certificate }: CertificateProps) {
 			</div>
 		</Fade>
 	);
-};
+}

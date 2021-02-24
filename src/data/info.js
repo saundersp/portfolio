@@ -8,28 +8,31 @@ import EtudePopulationMondiale from './images/EtudePopulationMondiale.png';
 import CVFR from './CV Pierre Saunders - FR.pdf';
 import CVUK from './CV Pierre Saunders - UK.pdf';
 
+const createLink = (href, name) => (<a target='_blank' rel='noopener noreferrer' href={href}> {name}</a>);
+
+/* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
 export default {
 	menu: {
 		home: ['Accueil', 'Home'],
 		about: ['À propos', 'About'],
 		work: ['Travaux', 'Work'],
-		contact: ['Contacter', 'Contact'],
+		contact: ['Contact', 'Contact'],
 		liveDemo: ['Démo live', 'Live demo'],
-		download_link: ["Télécharger", "Download"],
-		CV: 'Curriculum vitæ',
+		download_link: ['Télécharger', 'Download'],
+		CV: ['Curriculum vitæ', 'Curriculum vitæ'],
 		credits: [
-			<>Site crée avec React, <a target='_blank' rel="noopener noreferrer" href={'https://github.com/saundersp/portfolio'}> Code Source</a></>,
-			<>Made using React, <a target='_blank' rel="noopener noreferrer" href={'https://github.com/saundersp/portfolio'}> Source Code</a></>
+			<>Site crée avec React, {createLink('https://github.com/saundersp/portfolio', 'Code Source')}</>,
+			<>Made using React, {createLink('https://github.com/saundersp/portfolio', 'Source Code')}</>
 		]
 	},
 	headerTagline: [
 		[
-			'Bonjour 👋 vous m\'avez trouvé(e)!',
-			'Je suis Pierre Saunders, ',
+			"Bonjour 👋 vous m'avez trouvé(e)!",
+			'Je suis Pierre Saunders,',
 			'Étudiant en machine learning'
 		], [
 			'Hi 👋 You found me!',
-			'I am Saunders Pierre, ',
+			'I am Saunders Pierre,',
 			'Student in machine learning'
 		]
 	],
@@ -48,11 +51,11 @@ export default {
 			service: ['Apprentissage profond', 'Deep learning'],
 			desc: [
 				'Implémentation du Wasserstein GAN avec pénalité de gradient',
-				'Implemenation of the Wasserstein GAN with gradient penalty'
+				'Implementation of the Wasserstein GAN with gradient penalty'
 			],
-			techs: ["Python", "Tensorflow"],
+			techs: ['Python', 'Tensorflow'],
 			imageSrc: WGANGPImage,
-			src: 'https://github.com/saundersp/wgan-gp',
+			src: 'https://github.com/saundersp/wgan-gp'
 		},
 		{
 			title: 'FlappAI',
@@ -61,45 +64,45 @@ export default {
 				'IA jouant à Flappy bird',
 				'AI Playing Flappy bird'
 			],
-			techs: ["HTML", "CSS", "Javascript"],
+			techs: ['HTML', 'CSS', 'Javascript'],
 			imageSrc: FlappyIAImage,
 			url: 'https://saundersp.github.io/FlappAI/',
-			src: 'https://github.com/saundersp/FlappAI',
+			src: 'https://github.com/saundersp/FlappAI'
 		},
 		{
 			title: 'JeuDeGoIA',
 			service: ['MinMax', 'MinMax'],
 			desc: [
-				'Implémentation d\'une IA jouant au jeu de Go',
+				"Implémentation d'une IA jouant au jeu de Go",
 				'Implementation of an AI playing Go'
 			],
-			techs: ["HTML", "CSS", "Javascript"],
+			techs: ['HTML', 'CSS', 'Javascript'],
 			imageSrc: JeuDeGoIAImage,
 			src: 'https://github.com/saundersp/JeuDeGoIA',
-			url: 'https://saundersp.github.io/JeuDeGoIA/',
+			url: 'https://saundersp.github.io/JeuDeGoIA/'
 		},
 		{
 			title: 'SimpleGradientDescent',
 			service: ['Apprentissage profond', 'Deep learning'],
 			desc: [
-				'Implémentation d\'une descente de gradient avec diverses technique d\'optimisation',
-				'Implementation of gradient descent with differents optimisation techniques'
+				"Implémentation d'une descente de gradient avec diverses technique d'optimisation",
+				'Implementation of gradient descent with different optimisation techniques'
 			],
-			techs: ["Python", "Jupyter", "Numpy", "Matplotlib"],
+			techs: ['Python', 'Jupyter', 'Numpy', 'Matplotlib'],
 			imageSrc: GradientDescentImage,
 			src: 'https://github.com/saundersp/SimpleGradientDescent',
-			url: 'https://github.com/saundersp/SimpleGradientDescent/blob/master/Linear%20Regression.ipynb',
+			url: 'https://github.com/saundersp/SimpleGradientDescent/blob/master/Linear%20Regression.ipynb'
 		},
 		{
-			title: "ToolboxModule",
+			title: 'ToolboxModule',
 			service: ['Module Javascript', 'Javascript module'],
 			desc: [
 				'Module incluant plusieurs fonctions réutilisables pour divers projets',
 				'Module including several functions reusable for various projects'
 			],
-			techs: ["Javascript", "NodeJS"],
+			techs: ['Javascript', 'NodeJS'],
 			imageIcon: FaToolbox,
-			src: 'https://github.com/saundersp/ToolboxModule',
+			src: 'https://github.com/saundersp/ToolboxModule'
 		},
 		{
 			title: 'ESP32Manager',
@@ -108,27 +111,27 @@ export default {
 				'Projet IOT pour configurer, gérer, et prédire des pannes de carte ESP32',
 				'IOT Project to manage, handle, and predicts anomalies on ESP32 boards'
 			],
-			techs: ["VueJS", "Arduino", "Python"],
+			techs: ['VueJS', 'Arduino', 'Python'],
 			imageSrc: 'https://raw.githubusercontent.com/saundersp/ESP32Manager/master/front/src/assets/logo.png',
-			src: 'https://github.com/saundersp/ESP32Manager',
+			src: 'https://github.com/saundersp/ESP32Manager'
 		},
 		{
 			title: 'MarioSokoban',
 			service: ['Jeu vidéo', 'Video Game'],
-			desc: ['Un jeu de Sokoban sur le thème de Mario', 'A Mario\'s themed sokoban game'],
-			techs: ["C++"],
-			imageSrc: "https://raw.githubusercontent.com/saundersp/MarioSokoban/master/bin/data/menus/instructions_jeu.png",
+			desc: ['Un jeu de Sokoban sur le thème de Mario', "A Mario's themed sokoban game"],
+			techs: ['C++'],
+			imageSrc: 'https://raw.githubusercontent.com/saundersp/MarioSokoban/master/bin/data/menus/instructions_jeu.png',
 			src: 'https://github.com/saundersp/MarioSokoban',
 			download_url: 'https://github.com/saundersp/MarioSokoban/releases/download/1.0/MarioSokoban.zip'
 		},
 		{
 			title: 'EtudePopulationMondiale',
 			service: ['Exploration de données', 'Data mining'],
-			desc: ['Étude de l\'évolution de la population mondiale', 'Study on the evolution of the global population'], // Description
+			desc: ["Étude de l'évolution de la population mondiale", 'Study on the evolution of the global population'],
 			techs: ['R', 'Jupyter', 'tidyverse'],
 			imageSrc: EtudePopulationMondiale,
 			src: 'https://github.com/saundersp/EtudePopulationMondiale',
-			url: "https://github.com/saundersp/EtudePopulationMondiale/blob/master/%C3%89tude%20de%20l'%C3%A9volution%20de%20la%20population%20mondiale.ipynb",
+			url: "https://github.com/saundersp/EtudePopulationMondiale/blob/master/%C3%89tude%20de%20l'%C3%A9volution%20de%20la%20population%20mondiale.ipynb"
 		}
 		/*
 		{
@@ -144,4 +147,4 @@ export default {
 		}
 		*/
 	]
-};
+}
