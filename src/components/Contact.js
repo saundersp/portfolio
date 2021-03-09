@@ -9,7 +9,19 @@ import { loadResource, createElementLink } from './../toolbox';
 const loadCV = (lang: string) => loadResource(`CV/CV Pierre Saunders - ${lang}.pdf`);
 
 export default function Contact() {
-	const { t } = useLang();
+	const { t, getLangCode } = useLang();
+	const [CV, setCV] = useState(null);
+
+	useEffect(() => {
+		let isMounted = true;
+		(async () => {
+			const cv = await loadCV(getLangCode());
+			if (isMounted)
+				setCV(cv);
+		})();
+		return () => { isMounted = false; };
+	}, [getLangCode])
+
 	return (
 		<Fade direction="left" duration={500} cascade triggerOnce>
 			<div className='contact'>

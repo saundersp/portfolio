@@ -10,45 +10,51 @@ import { createLink } from './../toolbox';
 /* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
 export default {
 	menu: {
-		home: ['Accueil', 'Home'],
-		about: ['À propos', 'About'],
-		work: ['Travaux', 'Work'],
-		contact: ['Contact', 'Contact'],
-		liveDemo: ['Démo live', 'Live demo'],
-		download_link: ['Télécharger', 'Download'],
-		CV: ['Curriculum vitæ', 'Curriculum vitæ'],
+		home: ['Home', 'Accueil', 'Startseite'],
+		about: ['About', 'À propos', 'Über'],
+		work: ['Works', 'Travaux', 'Werke'],
+		contact: ['Contact', 'Contact', 'Kontakt'],
+		liveDemo: ['Live demo', 'Démo live', 'Live-Demo'],
+		source: ['Source Code', 'Code Source', 'Quellcode'],
+		download_link: ['Download', 'Télécharger', 'Herunterladen'],
+		CV: ['Curriculum vitæ', 'Curriculum vitæ', 'Lebenslauf'],
 		credits: [
+			<>Made using React, {createLink('https://github.com/saundersp/portfolio', 'Source Code')}</>,
 			<>Site crée avec React, {createLink('https://github.com/saundersp/portfolio', 'Code Source')}</>,
-			<>Made using React, {createLink('https://github.com/saundersp/portfolio', 'Source Code')}</>
+			<>Hergestellt mit React, {createLink('https://github.com/saundersp/portfolio', 'Quellcode')}</>
 		]
 	},
-	headerTagline: [
-		[
-			"Bonjour 👋 vous m'avez trouvé(e)!",
-			'Je suis Pierre Saunders,',
-			'Étudiant en machine learning'
-		], [
-			'Hi 👋 You found me!',
-			'I am Saunders Pierre,',
-			'Student in machine learning'
-		]
-	],
-	CV: [CVFR, CVUK],
+	headerTagline: [[
+		"Hi 👋 You've found me!",
+		'I am Saunders Pierre,',
+		'Student in artificial intelligence'
+	], [
+		"Bonjour 👋 vous m'avez trouvé(e)!",
+		'Je suis Saunders Pierre,',
+		'Étudiant en intelligence artificielle'
+	], [
+		'Hallo 👋 Sie haben mich gefunden!',
+		'Ich heiße Saunders Pierre',
+		'Student im künstliche Intelligenz'
+	]],
 	aboutText: [
-		<>Actuellement étudiant en 2ème année de Master MIAGE à Sophia-Antipolis. J'ai toujours été passionnée par l'informatique et ses possibilités.</>,
-		<>Currently a 2nd year Master MIAGE student in Sophia-Antipolis. I have always been fascinated about IT and its possibilities.</>
+		<>Currently a second year Master MIAGE student in Sophia-Antipolis. I have always been fascinated about artificial intelligence and its possibilities.</>,
+		<>Actuellement étudiant en deuxième année de Master MIAGE à Sophia-Antipolis. J'ai toujours été passionnée par l'intelligence artificielle et ses possibilités.</>,
+		<>Derzeit Master MIAGE-Student im zweiten Jahr in Sophia-Antipolis. Ich war schon immer von künstlicher Intelligenz und ihren Möglichkeiten fasziniert.</>
 	],
 	certificateAccordion: [
+		{ show: n => `Certificates (${n} more)`, hide: 'Hide' },
 		{ show: n => `Certificats (${n} en plus)`, hide: 'Cacher' },
-		{ show: n => `Certificates (${n} more)`, hide: 'Hide' }
+		{ show: n => `Zertifikate (${n} mehr)`, hide: 'Ausblenden' }
 	],
 	projects: [
 		{
 			title: 'WGAN-GP',
-			service: ['Apprentissage profond', 'Deep learning'],
+			service: ['Deep learning', 'Apprentissage profond', 'Tiefes Lernen'],
 			desc: [
+				'Implementation of the Wasserstein GAN with gradient penalty',
 				'Implémentation du Wasserstein GAN avec pénalité de gradient',
-				'Implementation of the Wasserstein GAN with gradient penalty'
+				'Implementierung des Wasserstein-GANs mit Gradientenstrafe'
 			],
 			techs: ['Python', 'Tensorflow'],
 			imageSrc: WGANGPImage,
@@ -56,10 +62,11 @@ export default {
 		},
 		{
 			title: 'FlappAI',
-			service: ['Algorithme génétique', 'Genetic algorithm'],
+			service: ['Genetic algorithm', 'Algorithme génétique', 'Genetischer Algorithmus'],
 			desc: [
-				'IA jouant à Flappy bird',
-				'AI Playing Flappy bird'
+				'AI Playing Flappy Bird',
+				'IA jouant à Flappy Bird',
+				'KI Spielt Flappy Bird'
 			],
 			techs: ['HTML', 'CSS', 'Javascript'],
 			imageSrc: FlappyIAImage,
@@ -68,10 +75,11 @@ export default {
 		},
 		{
 			title: 'JeuDeGoIA',
-			service: ['MinMax', 'MinMax'],
+			service: ['MinMax', 'MinMax', 'MinMax'],
 			desc: [
+				'Implementation of an AI playing Go',
 				"Implémentation d'une IA jouant au jeu de Go",
-				'Implementation of an AI playing Go'
+				'Implementierung einer Go spielenden KI'
 			],
 			techs: ['HTML', 'CSS', 'Javascript'],
 			imageSrc: JeuDeGoIAImage,
@@ -80,10 +88,11 @@ export default {
 		},
 		{
 			title: 'SimpleGradientDescent',
-			service: ['Apprentissage profond', 'Deep learning'],
+			service: ['Deep learning', 'Apprentissage profond', 'Tiefes Lernen'],
 			desc: [
+				'Implementation of gradient descent with different optimization methods',
 				"Implémentation d'une descente de gradient avec diverses technique d'optimisation",
-				'Implementation of gradient descent with different optimisation techniques'
+				'Implementierung des Gradientenabstiegs mit verschiedenen Optimierungsverfahren'
 			],
 			techs: ['Python', 'Jupyter', 'Numpy', 'Matplotlib'],
 			imageSrc: GradientDescentImage,
@@ -92,10 +101,11 @@ export default {
 		},
 		{
 			title: 'ToolboxModule',
-			service: ['Module Javascript', 'Javascript module'],
+			service: ['Javascript module', 'Module Javascript', 'Javascript-Modul'],
 			desc: [
+				'Module including several functions reusable for various projects',
 				'Module incluant plusieurs fonctions réutilisables pour divers projets',
-				'Module including several functions reusable for various projects'
+				'Modul mit mehreren Funktionen, die für verschiedene Projekte wiederverwendbar sind'
 			],
 			techs: ['Javascript', 'NodeJS'],
 			imageIcon: FaToolbox,
@@ -103,10 +113,11 @@ export default {
 		},
 		{
 			title: 'ESP32Manager',
-			service: ['Iot / Apprentissage automatique', 'IoT / Machine learning'],
+			service: ['IoT / Machine learning', 'IoT / Apprentissage automatique', 'IoT / Maschinelles Lernen'],
 			desc: [
-				'Projet IOT pour configurer, gérer, et prédire des pannes de carte ESP32',
-				'IOT Project to manage, handle, and predicts anomalies on ESP32 boards'
+				'IoT Project to manage, handle, and predict anomalies on ESP32 boards',
+				'Projet IoT pour configurer, gérer, et prédire des pannes de carte ESP32',
+				'IoT-Projekt zur Verwaltung, Handhabung und Vorhersage von Anomalien auf ESP32-Boards'
 			],
 			techs: ['VueJS', 'Arduino', 'Python'],
 			imageSrc: 'https://raw.githubusercontent.com/saundersp/ESP32Manager/master/front/src/assets/logo.png',
@@ -114,8 +125,12 @@ export default {
 		},
 		{
 			title: 'MarioSokoban',
-			service: ['Jeu vidéo', 'Video Game'],
-			desc: ['Un jeu de Sokoban sur le thème de Mario', "A Mario's themed sokoban game"],
+			service: ['Video Game', 'Jeu vidéo', 'Videospiel'],
+			desc: [
+				"A Mario's themed sokoban game",
+				'Un jeu de Sokoban sur le thème de Mario',
+				'Ein Sokoban-Spiel mit Marios Thema'
+			],
 			techs: ['C++'],
 			imageSrc: 'https://raw.githubusercontent.com/saundersp/MarioSokoban/master/bin/data/menus/instructions_jeu.png',
 			src: 'https://github.com/saundersp/MarioSokoban',
@@ -123,8 +138,12 @@ export default {
 		},
 		{
 			title: 'EtudePopulationMondiale',
-			service: ['Exploration de données', 'Data mining'],
-			desc: ["Étude de l'évolution de la population mondiale", 'Study on the evolution of the global population'],
+			service: ['Data mining', 'Exploration de données', 'Data-Mining'],
+			desc: [
+				'Study on the evolution of the global population',
+				"Étude de l'évolution de la population mondiale",
+				'Studie über die Entwicklung der Weltbevölkerung'
+			],
 			techs: ['R', 'Jupyter', 'tidyverse'],
 			imageSrc: EtudePopulationMondiale,
 			src: 'https://github.com/saundersp/EtudePopulationMondiale',
@@ -133,8 +152,8 @@ export default {
 		/*
 		{
 			title: '', // Title of the project
-			service: ['FR', 'UK'], // Category of work (JS/ML ...)
-			desc: ['FR', 'UK'], // Description
+			service: ['UK', 'FR', 'DE'], // Category of work (JS/ML ...)
+			desc: ['UK', 'FR', 'DE'], // Description
 			techs: [], // List of technologies used (Javascript / Python ...)
 			imageSrc: '', // Link to a representative image [optional]
 			imageIcon: , // Reflect F.A Icon object [optional]

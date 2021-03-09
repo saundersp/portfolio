@@ -6,6 +6,7 @@ import Work from './components/Work';
 import Contact from './components/Contact';
 import { Fade } from 'react-awesome-reveal';
 import LanguageService from './services/LanguageService';
+import common from './data/common';
 
 export default function App() {
 	const [navOpened, setNavOpened] = useState(false);
@@ -35,7 +36,7 @@ export default function App() {
 	};
 
 	return (
-		<LanguageService>
+		<LanguageService availableLangs={common.languages.map(e => e.code)}>
 			<div className='app' onClick={menu.hide}>
 				<Fade direction="left" duration={1000} cascade triggerOnce>
 					<Header menu={menu} />
