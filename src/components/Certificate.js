@@ -1,6 +1,6 @@
 import React, { createElement, useState, useEffect } from 'react';
 import { FaRegImage, FaRegFileImage, FaRegFilePdf } from 'react-icons/fa';
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 import '../scss/Certificate.scss';
 import { loadResource, createElementLink } from './../toolbox';
 
@@ -35,7 +35,7 @@ export default function Certificate({ certificate }: CertificateProps) {
 	);
 
 	return (
-		<Fade bottom cascade>
+		<Fade direction="down" duration={500} cascade triggerOnce>
 			<div className='certificate'>
 				<a className='certificateImage' target='_blank' rel='noopener noreferrer' href={image}>
 					{!imageLoadingError ?

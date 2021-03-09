@@ -1,5 +1,5 @@
-import React, { createElement } from 'react';
-import Fade from 'react-reveal/Fade';
+import React, { useEffect, useState } from 'react';
+import { Fade } from 'react-awesome-reveal';
 import { FaRegFilePdf } from 'react-icons/fa';
 import '../scss/Contact.scss';
 import common from '../data/common';
@@ -11,7 +11,7 @@ const loadCV = (lang: string) => loadResource(`CV/CV Pierre Saunders - ${lang}.p
 export default function Contact() {
 	const { t } = useLang();
 	return (
-		<Fade bottom cascade>
+		<Fade direction="left" duration={500} cascade triggerOnce>
 			<div className='contact'>
 				<h1>{t('menu.contact')}</h1>
 				<div className='contact-content'>

@@ -1,7 +1,7 @@
 import React, { createElement, useState } from 'react';
 import { FaGithub, FaRegPaperPlane, FaRegImage, FaDownload } from 'react-icons/fa';
 import { IconType } from 'react-icons';
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 import '../scss/Project.scss';
 import { useLang } from '../services/LanguageService';
 import { createElementLink } from './../toolbox';
@@ -35,7 +35,7 @@ export default function Project({ project }: ProjetProps) {
 	const selectedLang = getLangIndex();
 
 	return (
-		<Fade bottom cascade>
+		<Fade direction="left" duration={500} cascade triggerOnce>
 			<div className='project'>
 				<div className='projectImage'>
 					<a target='_blank' rel='noopener noreferrer' href={url || src || '#'}>

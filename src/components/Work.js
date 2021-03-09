@@ -1,5 +1,5 @@
 import React from 'react';
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 import '../scss/Work.scss';
 import Project from './Project';
 import language from '../data/info';
@@ -9,7 +9,7 @@ export default function Work() {
 	const { t } = useLang();
 
 	return (
-		<Fade bottom cascade>
+		<Fade direction="left" duration={500} cascade triggerOnce>
 			<div className='work'>
 				<h1 className='heading'>{t('menu.work')}</h1>
 				<div className='work-content'>

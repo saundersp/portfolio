@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 import '../scss/About.scss';
 import common from '../data/common';
 import Certificate from './Certificate';
@@ -14,7 +14,7 @@ export default function About() {
 	const { hide, show } = t("certificateAccordion");
 
 	return (
-		<Fade bottom cascade>
+		<Fade direction="left" duration={500} cascade triggerOnce>
 			<div className='about'>
 				<h1 className='heading'>{t('menu.about')}</h1>
 				<div className='about-content'>

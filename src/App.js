@@ -4,7 +4,7 @@ import Header from './components/Header';
 import About from './components/About';
 import Work from './components/Work';
 import Contact from './components/Contact';
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 import LanguageService from './services/LanguageService';
 
 export default function App() {
@@ -37,7 +37,7 @@ export default function App() {
 	return (
 		<LanguageService>
 			<div className='app' onClick={menu.hide}>
-				<Fade bottom cascade>
+				<Fade direction="left" duration={1000} cascade triggerOnce>
 					<Header menu={menu} />
 					<Work />
 					<About />
