@@ -2,10 +2,9 @@ import React, { createElement, useState, useEffect } from 'react';
 import { FaRegImage, FaRegFileImage, FaRegFilePdf } from 'react-icons/fa';
 import Fade from 'react-reveal/Fade';
 import '../scss/Certificate.scss';
+import { loadResource, createElementLink } from './../toolbox';
 
-const loadResource = (title, ext) => new Promise(async resolve =>
-	resolve((await import(/* webpackMode: 'eager' */ `./../data/certificates/${title}.${ext}`)).default)
-);
+const loadCertificate = (title: string, ext: string) => loadResource(`certificates/${title}.${ext}`);
 
 type CertificateProps = {
 	certificate: {
@@ -22,7 +21,7 @@ export default function Certificate({ certificate }: CertificateProps) {
 	useEffect(() => {
 		let isMounted = true;
 		(async () => {
-			const [image, pdf] = await Promise.all(['jpg', 'pdf'].map(ext => loadResource(title, ext)));
+			const [image, pdf] = await Promise.all(['jpg', 'pdf'].map(ext => loadCertificate(title, ext)));
 			if (isMounted) {
 				setImage(image);
 				setPdf(pdf);
@@ -45,8 +44,8 @@ export default function Certificate({ certificate }: CertificateProps) {
 				</a>
 				<h1>{title}</h1><q>{author}</q>
 				<ul>
-					<li>{createLink(FaRegFileImage, image, 'JPG')}</li>
-					<li>{createLink(FaRegFilePdf, pdf, 'PDF')}</li>
+					<li>{createElementLink(FaRegFileImage, image, 'JPG')}</li>
+					<li>{createElementLink(FaRegFilePdf, pdf, 'PDF')}</li>
 				</ul>
 			</div>
 		</Fade>

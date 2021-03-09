@@ -5,10 +5,7 @@ import JeuDeGoIAImage from './images/JeuDeGoIA.png';
 import GradientDescentImage from './images/GradientDescent.png';
 import WGANGPImage from './images/WGANGP.png';
 import EtudePopulationMondiale from './images/EtudePopulationMondiale.png';
-import CVFR from './CV Pierre Saunders - FR.pdf';
-import CVUK from './CV Pierre Saunders - UK.pdf';
-
-const createLink = (href, name) => (<a target='_blank' rel='noopener noreferrer' href={href}> {name}</a>);
+import { createLink } from './../toolbox';
 
 /* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
 export default {

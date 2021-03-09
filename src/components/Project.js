@@ -4,6 +4,11 @@ import { IconType } from 'react-icons';
 import Fade from 'react-reveal/Fade';
 import '../scss/Project.scss';
 import { useLang } from '../services/LanguageService';
+import { createElementLink } from './../toolbox';
+
+const createLiElementLink = (tag: string | IconType, href: string, inner: string) => {
+	return (<li>{createElementLink(tag, href, inner)}</li>);
+};
 
 type ProjetProps = {
 	project: {
@@ -26,9 +31,6 @@ export default function Project({ project }: ProjetProps) {
 		<img decoding='async' src={imageSrc} alt={title} onError={_ => setImageLoadingError(true)} />
 		: createElement(imageIcon);
 
-	const createLink = (tag, href, title) => (
-		<li><a target='_blank' rel='noopener noreferrer' href={href}>{createElement(tag)} {title}</a></li>
-	);
 	const { t, getLangIndex } = useLang();
 	const selectedLang = getLangIndex();
 
@@ -45,9 +47,9 @@ export default function Project({ project }: ProjetProps) {
 				<p>{desc[selectedLang]}</p>
 				<ul className='techs'>{techs.map((tech, i) => (<li key={i}>{tech}</li>))}</ul>
 				<ul className='links'>
-					{url && (createLink(FaRegPaperPlane, url, t('menu.liveDemo')))}
-					{download_url && (createLink(FaDownload, download_url, t('menu.download_link')))}
-					{src && (createLink(FaGithub, src, 'Source'))}
+					{url && (createLiElementLink(FaRegPaperPlane, url, t('menu.liveDemo')))}
+					{download_url && (createLiElementLink(FaDownload, download_url, t('menu.download_link')))}
+					{src && (createLiElementLink(FaGithub, src, t('menu.source')))}
 				</ul>
 			</div>
 		</Fade>

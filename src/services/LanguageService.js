@@ -1,14 +1,6 @@
 import { createContext, useContext, useState } from 'react';
 import info from '../data/info';
-
-function getAttr(obj, index) {
-	for (let k of index.split('.'))
-		if (k in obj)
-			obj = obj[k];
-		else
-			return;
-	return obj;
-}
+import { getAttr } from './../toolbox';
 
 const LangContext = createContext(null);
 

@@ -4,10 +4,9 @@ import { FaRegFilePdf } from 'react-icons/fa';
 import '../scss/Contact.scss';
 import common from '../data/common';
 import { useLang } from '../services/LanguageService';
+import { loadResource, createElementLink } from './../toolbox';
 
-const createLink = (tag, href, title) => (
-	<a target='_blank' rel='noopener noreferrer' href={href}>{createElement(tag)} {title}</a>
-);
+const loadCV = (lang: string) => loadResource(`CV/CV Pierre Saunders - ${lang}.pdf`);
 
 export default function Contact() {
 	const { t } = useLang();
@@ -24,7 +23,7 @@ export default function Contact() {
 								</a>
 							</li>
 						))}
-						<li>{createLink(FaRegFilePdf, t('CV'), t('menu.CV'))}</li>
+						<li>{createElementLink(FaRegFilePdf, CV, t('menu.CV'))}</li>
 					</ul>
 				</div>
 			</div>
