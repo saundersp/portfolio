@@ -8,7 +8,7 @@ import common from '../data/common';
 import Navbar from './Navbar';
 const { name } = common;
 
-type HeaderProps = { menu: { show(e: MouseEvent): void, hide(e: MouseEvent): void, navRef: any }, };
+type HeaderProps = { menu: { show(e: MouseEvent): void, hide(e: MouseEvent): void, navRef: any } };
 export default function Header({ menu }: HeaderProps) {
 	const { t } = useLang();
 	return (
