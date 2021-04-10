@@ -4,7 +4,6 @@ import Header from './components/Header';
 import About from './components/About';
 import Work from './components/Work';
 import Contact from './components/Contact';
-import { Fade } from 'react-awesome-reveal';
 import LanguageService from './services/LanguageService';
 import common from './data/common';
 
@@ -38,12 +37,10 @@ export default function App() {
 	return (
 		<LanguageService availableLangs={common.languages.map(e => e.code)}>
 			<div className='app' onClick={menu.hide}>
-				<Fade direction="left" duration={1000} cascade triggerOnce>
-					<Header menu={menu} />
-					<Work />
-					<About />
-					<Contact />
-				</Fade>
+				<Header menu={menu} />
+				<Work />
+				<About />
+				<Contact />
 			</div>
 		</LanguageService>
 	);
