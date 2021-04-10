@@ -20,7 +20,7 @@ Deployment is made easy using Docker.
 ### No-SSL Version
 
 ```bash
-docker build . -f Dockerfile._no_ssl -t saundersp/portfolio_no_ssl:1.0
+docker build . -f Dockerfile.no_ssl -t saundersp/portfolio_no_ssl:1.0
 docker run -p 80:80 -d saundersp/portfolio_no_ssl:1.0
 ```
 
