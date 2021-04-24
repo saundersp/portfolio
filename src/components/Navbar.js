@@ -35,7 +35,7 @@ export default function Navbar({ menu }: NavbarProps) {
 				<li className='langs'>
 					{languages.map((lang, index) =>
 						<button key={index} onClick={_ => changeLang(index)}>
-							<img src={`https://www.countryflags.io/${lang.code}/flat/64.png`} alt={lang.name} />
+							<img src={`https://flagcdn.com/w80/${lang.code.toLowerCase()}.png`} alt={lang.name} />
 						</button>
 					)}
 				</li>

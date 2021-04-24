@@ -142,21 +142,22 @@ nav {
 			&.langs {
 				display: block;
 				position: absolute;
-				top: -1.2em;
+				top: -0.8em;
 				right: -3vw;
 				margin: 0;
 				padding: 0;
 
 				button {
 					background: rgb(240, 239, 239);
-					margin: 0 0.40vw 0 0.40vw;
+					margin: 0 0.4vw;
+					padding: 0.5vw 0.55vw;
 
 					img {
 						display: inherit;
 						min-width: 4.5vw;
 						width: 4.5vw;
-						min-height: 4vw;
-						height: 4vw;
+						min-height: 2.8vw;
+						height: 2.8vw;
 					}
 				}
 			}
