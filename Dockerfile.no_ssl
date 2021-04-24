@@ -1,12 +1,11 @@
 FROM node
 
-WORKDIR ./portfolio/build
+WORKDIR /home/saundersp/portfolio
 
-RUN npm install -g http-server
+COPY . .
 
-COPY build /usr/portfolio
-COPY certificates /usr/certificates
+RUN npm i -g http-server && npm i && npm run build
 
 EXPOSE 80
 
-CMD ["http-server", "/usr/portfolio", "-p", "80"]
+CMD ["http-server", "build", "-p", "80"]

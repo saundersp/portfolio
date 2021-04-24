@@ -1,14 +1,13 @@
 FROM node
 
-WORKDIR ./portfolio/build
+WORKDIR /home/saundersp/portfolio
 
-RUN npm install -g http-server
+COPY . .
 
-COPY build /usr/portfolio
-COPY certificates /usr/certificates
+RUN npm i -g http-server && npm i && npm run build
 
 EXPOSE 443
 
-CMD ["http-server", "/usr/portfolio", "-p", "443", \
-	"-S", "-C", "/usr/certificates/cert.pem", \
-	"-K", "/usr/certificates/privkey.pem"]
+CMD ["http-server", "build", "-p", "443", \
+	"-S", "-C", "certificates/cert.pem", \
+	"-K", "certificates/privkey.pem"]

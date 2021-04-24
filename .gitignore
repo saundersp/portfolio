@@ -1,4 +1,6 @@
+.vscode
+.jsbeautifyrc
+.jshintrc
 node_modules
 build
 certificates
-.*
