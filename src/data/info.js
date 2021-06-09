@@ -4,6 +4,7 @@ import FlappyIAImage from './images/FlappyIA.png';
 import JeuDeGoIAImage from './images/JeuDeGoIA.png';
 import GradientDescentImage from './images/GradientDescent.png';
 import WGANGPImage from './images/WGANGP.png';
+import VAEImage from './images/VAE.png';
 import EtudePopulationMondiale from './images/EtudePopulationMondiale.png';
 import { createLink } from './../toolbox';
 
@@ -48,6 +49,19 @@ export default {
 		{ show: n => `Zertifikate (${n} mehr)`, hide: 'Ausblenden' }
 	],
 	projects: [
+		{
+			title: 'VAE',
+			service: ['Deep learning', 'Apprentissage profond', 'Tiefes Lernen'],
+			desc: [
+				'Implementation of the Variational Auto Encoder',
+				"Implémentation de l'encodeur automatique variationnel",
+				'Implementierung des Variational Auto Encoders'
+			],
+			techs: ['Python', 'PyTorch'],
+			imageSrc: VAEImage,
+			src: 'https://github.com/saundersp/VariationalAutoEncoder',
+			url: 'https://nbviewer.jupyter.org/github/saundersp/VariationalAutoEncoder/blob/main/Variational%20Auto%20Encoder.ipynb'
+		},
 		{
 			title: 'WGAN-GP',
 			service: ['Deep learning', 'Apprentissage profond', 'Tiefes Lernen'],
@@ -97,7 +111,7 @@ export default {
 			techs: ['Python', 'Jupyter', 'Numpy', 'Matplotlib'],
 			imageSrc: GradientDescentImage,
 			src: 'https://github.com/saundersp/SimpleGradientDescent',
-			url: 'https://github.com/saundersp/SimpleGradientDescent/blob/master/Linear%20Regression.ipynb'
+			url: 'https://nbviewer.jupyter.org/github/saundersp/SimpleGradientDescent/blob/master/Linear%20Regression.ipynb'
 		},
 		{
 			title: 'ToolboxModule',
@@ -147,7 +161,7 @@ export default {
 			techs: ['R', 'Jupyter', 'tidyverse'],
 			imageSrc: EtudePopulationMondiale,
 			src: 'https://github.com/saundersp/EtudePopulationMondiale',
-			url: "https://github.com/saundersp/EtudePopulationMondiale/blob/master/%C3%89tude%20de%20l'%C3%A9volution%20de%20la%20population%20mondiale.ipynb"
+			url: "https://nbviewer.jupyter.org/github/saundersp/EtudePopulationMondiale/blob/master/%C3%89tude%20de%20l'%C3%A9volution%20de%20la%20population%20mondiale.ipynb"
 		}
 		/*
 		{
