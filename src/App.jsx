@@ -1,17 +1,17 @@
-import React, { useState, useRef, MouseEvent } from 'react'
+import { useState, useRef } from 'react';
 import './scss/App.scss';
 import Header from './components/Header';
 import About from './components/About';
 import Work from './components/Work';
 import Contact from './components/Contact';
 import LanguageService from './services/LanguageService';
-import common from './data/common';
+import info from './data/info';
 
 export default function App() {
 	const [navOpened, setNavOpened] = useState(false);
 
 	const menu = {
-		show: (e: MouseEvent): void => {
+		show: e => {
 			if (!navOpened) {
 				const cl = menu.navRef.current.classList;
 				cl.remove('hide-menu');
@@ -21,7 +21,7 @@ export default function App() {
 			}
 		},
 
-		hide: (e: MouseEvent): void => {
+		hide: e => {
 			if (navOpened) {
 				const cl = menu.navRef.current.classList;
 				cl.remove('show-menu');
@@ -35,7 +35,7 @@ export default function App() {
 	};
 
 	return (
-		<LanguageService availableLangs={common.languages.map(e => e.code)}>
+		<LanguageService availableLangs={info.languages.map(e => e.code)}>
 			<div className='app' onClick={menu.hide}>
 				<Header menu={menu} />
 				<Work />

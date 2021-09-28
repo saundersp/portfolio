@@ -1,15 +1,13 @@
-import React, { MouseEvent } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { Fade } from 'react-awesome-reveal';
 import { Link } from 'react-scroll';
 import { GrClose } from 'react-icons/gr';
 import '../scss/Navbar.scss';
 import { useLang } from '../services/LanguageService';
-import common from '../data/common';
-const { languages } = common;
+import info from '../data/info';
+const { languages } = info;
 
-type NavbarProps = { menu: { show(e: MouseEvent): void, hide(e: MouseEvent): void, navRef: any }, };
-export default function Navbar({ menu }: NavbarProps) {
+export default function Navbar({ menu }) {
 	const { t, changeLang } = useLang();
 	return (
 		<nav>

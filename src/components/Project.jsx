@@ -1,29 +1,15 @@
-import React, { createElement, useState } from 'react';
+import { createElement, useState } from 'react';
 import { FaGithub, FaRegPaperPlane, FaRegImage, FaDownload } from 'react-icons/fa';
-import { IconType } from 'react-icons';
 import { Fade } from 'react-awesome-reveal';
 import '../scss/Project.scss';
 import { useLang } from '../services/LanguageService';
-import { createElementLink } from './../toolbox';
+import { createElementLink } from '../toolbox';
 
-const createLiElementLink = (tag: string | IconType, href: string, inner: string) => {
+const createLiElementLink = (tag, href, inner) => {
 	return (<li>{createElementLink(tag, href, inner)}</li>);
 };
 
-type ProjetProps = {
-	project: {
-		title: string,
-		service: string[],
-		desc: string[],
-		techs: string[],
-		imageIcon?: IconType,
-		imageSrc?: string,
-		url?: string,
-		download_url?: string,
-		src?: string
-	}
-};
-export default function Project({ project }: ProjetProps) {
+export default function Project({ project }) {
 	const [imageLoadingError, setImageLoadingError] = useState(false);
 
 	const { url, imageSrc, title, service, desc, src, techs, download_url, imageIcon } = project;

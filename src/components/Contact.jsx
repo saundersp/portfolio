@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { FaRegFilePdf } from 'react-icons/fa';
 import '../scss/Contact.scss';
-import common from '../data/common';
+import info from '../data/info';
 import { useLang } from '../services/LanguageService';
-import { loadResource, createElementLink } from './../toolbox';
+import { loadResource, createElementLink } from '../toolbox';
 
-const loadCV = (lang: string) => loadResource(`CV/CV Pierre Saunders - ${lang}.pdf`);
+const loadCV = lang => loadResource(`CV/CV Pierre Saunders - ${lang}.pdf`);
 
 export default function Contact() {
 	const { t, getLangCode } = useLang();
@@ -20,7 +20,7 @@ export default function Contact() {
 				setCV(cv);
 		})();
 		return () => { isMounted = false; };
-	}, [getLangCode])
+	}, [getLangCode]);
 
 	return (
 		<Fade direction="left" duration={500} cascade triggerOnce>
@@ -28,7 +28,7 @@ export default function Contact() {
 				<h1>{t('menu.contact')}</h1>
 				<div className='contact-content'>
 					<ul>
-						{common.social.map((link, index) => (
+						{info.social.map((link, index) => (
 							<li key={index}>
 								<a target='_blank' rel='noopener noreferrer' href={link.url}>
 									<link.icon /> {link.name}

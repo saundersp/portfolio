@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from 'react';
 import info from '../data/info';
-import { getAttr } from './../toolbox';
+import { getAttr } from '../toolbox';
 
 const LangContext = createContext(null);
 
@@ -8,10 +8,10 @@ export default function LanguageService(props) {
 	const [lang, changeLang] = useState(0);
 
 	const value = {
-		t: props.t || (tag => getAttr(info, tag)[lang]),
-		changeLang: props.changeLang || changeLang,
-		getLangIndex: props.getLangIndex || (() => lang),
-		getLangCode: props.getLangCode || (() => props.availableLangs[lang])
+		t: (tag => getAttr(info, tag)[lang]),
+		changeLang,
+		getLangIndex: (() => lang),
+		getLangCode: (() => props.availableLangs[lang])
 	};
 
 	return (

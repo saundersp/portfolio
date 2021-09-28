@@ -1,15 +1,13 @@
-import React, { MouseEvent } from 'react';
 import { IoIosArrowDropdown } from 'react-icons/io';
 import { Fade } from 'react-awesome-reveal';
 import { Link } from 'react-scroll';
 import '../scss/Header.scss';
 import { useLang } from '../services/LanguageService';
-import common from '../data/common';
 import Navbar from './Navbar';
-const { name } = common;
+import info from '../data/info';
+const { name } = info;
 
-type HeaderProps = { menu: { show(e: MouseEvent): void, hide(e: MouseEvent): void, navRef: any } };
-export default function Header({ menu }: HeaderProps) {
+export default function Header({ menu }) {
 	const { t } = useLang();
 	return (
 		<div className='App-header'>
@@ -22,7 +20,7 @@ export default function Header({ menu }: HeaderProps) {
 			</header>
 			<Fade direction="left" duration={200} cascade triggerOnce>
 				<p className='header-title'>
-					{t('headerTagline').map(h => `${h}\n`)}
+					{t('headerTagLine').map(h => `${h}\n`)}
 					<button>
 						<Link to='contact' smooth offset={-70} duration={500}>
 							{t('menu.contact')}

@@ -1,7 +1,6 @@
 import { createElement } from 'react';
-import { IconType } from 'react-icons';
 
-export function loadResource(path: string): Promise<any> {
+export function loadResource(path) {
 	return new Promise(async (resolve, reject) => {
 		try {
 			return resolve((await import(`./data/${path}`)).default);
@@ -11,15 +10,15 @@ export function loadResource(path: string): Promise<any> {
 	});
 }
 
-export function createLink(href: string, inner: string) {
+export function createLink(href, inner) {
 	return (<a target='_blank' rel='noopener noreferrer' href={href}> <span>{inner}</span></a>);
 }
 
-export function createElementLink(tag: string | IconType, href: string, inner: string) {
+export function createElementLink(tag, href, inner) {
 	return (<a target='_blank' rel='noopener noreferrer' href={href}>{createElement(tag)} <span>{inner}</span></a>);
 }
 
-export function getAttr(obj: Object, index: string): any {
+export function getAttr(obj, index) {
 	for (const k of index.split('.'))
 		if (k in obj)
 			obj = obj[k];
