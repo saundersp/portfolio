@@ -48,20 +48,20 @@ export default {
 	headerTagLine: [[
 		"Hi 👋 You've found me!",
 		'I am Saunders Pierre,',
-		'Student in artificial intelligence'
+		'an artificial intelligence enthusiast 🤖'
 	], [
 		"Bonjour 👋 vous m'avez trouvé(e)!",
 		'Je suis Saunders Pierre,',
-		'Étudiant en intelligence artificielle'
+		"un passionné d'intelligence artificielle 🤖"
 	], [
 		'Hallo 👋 Sie haben mich gefunden!',
 		'Ich heiße Saunders Pierre',
-		'Student im künstliche Intelligenz'
+		'ein Enthusiast der künstlichen Intelligenz 🤖'
 	]],
 	aboutText: [
-		<>Currently a second year Master MIAGE student in Sophia-Antipolis. I have always been fascinated about artificial intelligence and its possibilities.</>,
-		<>Actuellement étudiant en deuxième année de Master MIAGE à Sophia-Antipolis. J'ai toujours été passionnée par l'intelligence artificielle et ses possibilités.</>,
-		<>Derzeit Master MIAGE-Student im zweiten Jahr in Sophia-Antipolis. Ich war schon immer von künstlicher Intelligenz und ihren Möglichkeiten fasziniert.</>
+		<>Born in Frimley Park (GB), I always was curious and eager for knowledge in diverse fields. I am currently looking for funding for a PhD position in generative models. Music, swimming and cinema are hobbies that I love as much as programming.</>,
+		<>Né à Frimley Park (GB), j'ai toujours été curieux et avide de connaissances dans divers domaines. Je suis actuellement à la recherche de financement pour un poste de doctorant en modèles génératifs. La musique, la natation et le cinéma sont des loisirs que j'aime autant que la programmation.</>,
+		<>Geboren in Frimley Park (GB), war ich schon immer neugierig und wissbegierig in verschiedenen Bereichen. Derzeit bin ich auf der Suche nach einer Finanzierung für eine Doktorandenstelle im Bereich generativer Modelle. Musik, Schwimmen und Kino sind Hobbys, die ich ebenso sehr liebe wie das Programmieren.</>
 	],
 	certificateAccordion: [
 		{ show: n => `Certificates (${n} more)`, hide: 'Hide' },
