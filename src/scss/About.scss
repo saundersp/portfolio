@@ -60,11 +60,43 @@
 				margin-top: 5vh;
 			}
 
-			@include media(">=LGdesktop") {
+			@include media(">=LGDesktop") {
 				width: 20vw;
 				height: 20vw;
 				margin-top: 1vh;
 			}
+		}
+	}
+
+	.skill-title {
+		text-decoration: underline;
+	}
+
+	.skill-table {
+		border-collapse: collapse;
+		width: 100%;
+
+		.outer-bar {
+			border-radius: 3pt;
+			width: 100%;
+			background-color: lightgray;
+		}
+
+		.inner-bar {
+			border-radius: inherit;
+			color: white;
+			font-size: 0.7em;
+			font-weight: bold;
+			background-color: #9352ae;
+		}
+
+		tbody tr {
+			border-top: 1px;
+			border-right: 0px;
+			border-left: 0px;
+			border-bottom: 0px;
+			border-color: #00000050;
+			border-style: solid;
 		}
 	}
 }
