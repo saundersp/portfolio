@@ -69,21 +69,21 @@ export default {
 		{ show: n => `Zertifikate (${n} mehr)`, hide: 'Ausblenden' }
 	],
 	skill_names: [
-		["General knowledge", "Frameworks", "Languages", "Others"],
-		["Connaissances générales", "Frameworks", "Langages", "Autres"],
-		["Allgemeines Wissen", "Rahmenwerke", "Sprachen", "Andere"]
+		['General knowledge', 'Frameworks', 'Languages', 'Others'],
+		['Connaissances générales', 'Frameworks', 'Langages', 'Autres'],
+		['Allgemeines Wissen', 'Rahmenwerke', 'Sprachen', 'Andere']
 	],
 	skills_table_titles: [
-		["Skill name", "LinkedIn Validation", "Estimated Level"],
-		["Nom Compétence", "Validation LinkedIn", "Niveau estimé"],
-		["Skill-Name", "LinkedIn Validierung", "Geschätztes Stufe"]
+		['Skill name', 'LinkedIn Validation', 'Estimated Level'],
+		['Nom Compétence', 'Validation LinkedIn', 'Niveau estimé'],
+		['Skill-Name', 'LinkedIn Validierung', 'Geschätztes Stufe']
 	],
 	skills: [
 		[
 			{ name: ['Object-Oriented Programming (OOP)', 'Programmation Orientée Objet (POO)', 'Objektorientierte Programmierung'], has_linked_badge: true, level: 90 },
 			{ name: ['Machine Learning', 'Apprentissage automatique', 'Maschinelles Lernen'], has_linked_badge: true, level: 85 },
 			{ name: ['Deep Learning', 'Apprentissage profond', 'Tiefes Lernen'], level: 90 },
-			{ name: ['Agile Method', 'Méthod Agile', 'Agile Methode'], level: 40 },
+			{ name: ['Agile Method', 'Méthode Agile', 'Agile Methode'], level: 40 },
 		],
 		[
 			{ name: 'Android', has_linked_badge: true, level: 70 },
@@ -123,9 +123,9 @@ export default {
 		],
 	],
 	projects_title: [
-		["Research projects", "School projects", "Personal projects"],
-		["Projets de recherche", "Projets scolaires", "Projets personnels"],
-		["Forschungprojekte", "Schulprojekte", "Persönliche Projekte"]
+		['Research projects 🔬', 'School projects 🏫', 'Personal projects 🚀'],
+		['Projets de recherche 🔬', 'Projets scolaires 🏫', 'Projets personnels 🚀'],
+		['Forschungsprojekte 🔬', 'Schulprojekte 🏫', 'Persönliche Projekte 🚀']
 	],
 	projects: [
 		[
