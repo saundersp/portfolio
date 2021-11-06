@@ -11,7 +11,9 @@ export default function Header({ menu }) {
 	const { t } = useLang();
 	return (
 		<div className='App-header'>
-			<h1 className='heading-background'>CREATIVE</h1>
+			<div className="heading-background">
+				<h1>CREATIVE</h1>
+			</div>
 			<header>
 				<h1><Fade direction="left" duration={200} cascade triggerOnce>
 					{name}
