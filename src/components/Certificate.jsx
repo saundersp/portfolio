@@ -9,16 +9,19 @@ const loadCertificate = (title, ext) => loadResource(`certificates/${title}.${ex
 export default function Certificate(props) {
 	const { title, author } = props.certificate;
 	const [imageLoadingError, setImageLoadingError] = useState(false);
+	const [imageMin, setImageMin] = useState(undefined);
 	const [image, setImage] = useState(undefined);
 	const [pdf, setPdf] = useState(undefined);
 
 	useEffect(() => {
 		let isMounted = true;
 		(async () => {
+			const imageMin = await loadCertificate(`${title}_min`, 'jpg');
+			if (isMounted)
+				setImageMin(imageMin);
 			const [image, pdf] = await Promise.all(['jpg', 'pdf'].map(ext => loadCertificate(title, ext)));
 			if (isMounted)
 				setImage(image) || setPdf(pdf);
-
 		})();
 		return () => { isMounted = false; };
 	}, [title]);
@@ -28,7 +31,7 @@ export default function Certificate(props) {
 			<div className='certificate'>
 				<a className='certificateImage' target='_blank' rel='noopener noreferrer' href={image}>
 					{!imageLoadingError ?
-						<img decoding='async' src={image} alt={title} onError={_ => setImageLoadingError(true)} />
+						<img decoding='async' src={imageMin} alt={title} onError={_ => setImageLoadingError(true)} />
 						: <FaRegImage />}
 				</a>
 				<h1>{title}</h1><q>{author}</q>
