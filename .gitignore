@@ -1,7 +1,6 @@
 .vim
-.vscode
 .jsbeautifyrc
 .jshintrc
-node_modules
-build
-certificates
+node_modules/**
+build/**
+certificates/**
