@@ -22,7 +22,7 @@ export default function About() {
 					<div className='description'>
 						<p>{t('aboutText')}</p>
 						<div className='badges'>
-							{badges.map((e, i) => <img key={i} alt={e.name} src={e.url}/>)}
+							{badges.map((e, i) => <a key={i} href={e.url}><img alt={e.name} src={e.src}/></a>)}
 						</div>
 						<button className='showAllCertificates' onClick={_ => setShowAllCertificates(!showAllCertificates)}>
 							{showAllCertificates ? (<><BsChevronUp />{hide}<BsChevronUp /></>)
