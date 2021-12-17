@@ -22,8 +22,8 @@ export default function Header({ menu }) {
 			</header>
 			<Fade direction="left" duration={200} cascade triggerOnce>
 				<p className='header-title'>
-					{t('headerTagLine').map(h => `${h}\n`)}
-					<button>
+						{`${t('headerTagLine')}\n`}
+						<button>
 						<Link to='contact' smooth offset={-70} duration={500}>
 							{t('menu.contact')}
 						</Link>

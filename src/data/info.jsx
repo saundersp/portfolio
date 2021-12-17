@@ -8,13 +8,14 @@ import EtudePopulationMondiale from './images/EtudePopulationMondiale.png';
 import QCMJump from './images/QCMJump.png';
 import SevenWonders from './images/7Wonders.jpg';
 import HBase from './images/HBase.png';
+import ProfilePicture from './images/profile_picture.jpg';
 import { createLink } from '../toolbox';
 
 /* eslint import/no-anonymous-default-export: [2, {'allowObject': true}] */
 export default {
 	name: 'Saunders Pierre',
 	languages: [{ name: 'English', code: 'GB' }, { name: 'Français', code: 'FR' }, { name: 'Deutsch', code: 'DE' }, { name: 'Español', code: 'ES' }, { name: 'Italiano', code: 'IT' }, { name: 'Россия', code: 'RU' }],
-	aboutImage: 'https://media-exp1.licdn.com/dms/image/C4D03AQEXoQPNTzC4qA/profile-displayphoto-shrink_800_800/0/1594979363759?e=1638403200&v=beta&t=RyGh1vEvYB_VvlLgCNEiV1CBafU1r14CBKHLx4CuUS8',
+	aboutImage: ProfilePicture,
 	social: [
 		{ name: 'GitHub', icon: FaGithub, url: 'https://github.com/saundersp' },
 		{ name: 'LinkedIn', icon: FaLinkedin, url: 'https://www.linkedin.com/in/pierre-saunders' },
@@ -48,31 +49,14 @@ export default {
 			<>Веб-сайт, созданный с помощью React, {createLink('https://github.com/saundersp/portfolio', 'Исходный код')}</>
 		]
 	},
-	headerTagLine: [[
-		"Hi 👋 You've found me!",
-		'I am Saunders Pierre,',
-		'an artificial intelligence enthusiast 🤖'
-	], [
-		"Bonjour 👋 vous m'avez trouvé(e)!",
-		'Je suis Saunders Pierre,',
-		"un passionné d'intelligence artificielle 🤖"
-	], [
-		'Hallo 👋 Sie haben mich gefunden!',
-		'Ich heiße Saunders Pierre',
-		'ein Enthusiast der künstlichen Intelligenz 🤖'
-	], [
-		'Hola 👋 ¡Me has encontrado!',
-		'Soy Pierre Saunders',
-		'un entusiasta de la inteligencia artificial 🤖'
-	], [
-		'Ciao 👋 mi hai trovato!',
-		'Sono Pierre Saunders',
-		'un appassionato di intelligenza artificiale 🤖'
-	], [
-		'Привет 👋 ты нашел меня!',
-		'Я Пьер Сондерс.',
-		'энтузиаст искусственного интеллекта 🤖'
-	]],
+	headerTagLine: [
+		"Hi 👋 You've found me!\nI am Saunders Pierre,\nan artificial intelligence enthusiast 🤖",
+		"Bonjour 👋 vous m'avez trouvé(e)!\nJe suis Saunders Pierre,\nun passionné d'intelligence artificielle 🤖",
+		"Hallo 👋 Sie haben mich gefunden!\nIch heiße Saunders Pierre\nein Enthusiast der künstlichen Intelligenz 🤖",
+		"Hola 👋 ¡Me has encontrado!\nSoy Pierre Saunders\nun entusiasta de la inteligencia artificial 🤖",
+		"Ciao 👋 mi hai trovato!\nSono Pierre Saunders\nun appassionato di intelligenza artificiale 🤖",
+		"Привет 👋 ты нашел меня!\nЯ Пьер Сондерс.\nэнтузиаст искусственного интеллекта 🤖"
+	],
 	aboutText: [
 		<>Born in Frimley Park (GB), I always was curious and eager for knowledge in diverse fields. I am currently looking for funding for a PhD position in generative models. Music, swimming and cinema are hobbies that I love as much as programming.</>,
 		<>Né à Frimley Park (GB), j'ai toujours été curieux et avide de connaissances dans divers domaines. Je suis actuellement à la recherche de financement pour un poste de doctorant en modèles génératifs. La musique, la natation et le cinéma sont des loisirs que j'aime autant que la programmation.</>,
@@ -80,6 +64,12 @@ export default {
 		<>Nacido en Frimley Park (Reino Unido), siempre he tenido curiosidad y ganas de aprender en diversos campos. Actualmente estoy buscando financiación para un puesto de doctorado en modelos generativos. La música, la natación y el cine son aficiones que me gustan tanto como la programación.</>,
 		<>Nato a Frimley Park (Regno Unito), sono sempre stato curioso e desideroso di imparare in vari campi. Attualmente sto cercando finanziamenti per una posizione di dottorato in modelli generativi. La musica, il nuoto e il cinema sono hobby che mi piacciono tanto quanto la programmazione.</>,
 		<>Я родился в Фримли Парк (Великобритания), всегда был любознательным и стремился к знаниям в различных областях. В настоящее время я ищу финансирование на должность доктора философии в области генеративных моделей. Музыка, плавание и кино - хобби, которые мне нравятся не меньше, чем программирование.</>
+	],
+	badges: [
+		{ name: 'Gentoo-Logo', url: 'https://img.shields.io/badge/OS-Gentoo-9cf?style=for-the-badge&labelColor=E9E9E9&color=625BC7&logoColor=54487A&logo=data:image/svg%2bxml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogPHRpdGxlPkdlbnRvbzwvdGl0bGU+CgogPGcgY2xhc3M9ImxheWVyIj4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBhdGggZD0ibTkuOTQsMGE3LjMxLDcuMzEgMCAwIDAgLTEuMjYsMC4xMTZjLTQuMzQ0LDAuNzk1IC03LjQsNC41NTUgLTcuNjYxLDcuMDMxYy0wLjEyNiwxLjIxNSAwLjUzLDIuMTI1IDAuODksMi41MjZjMC45NzcsMS4wODUgMi45MjQsMS45MTQgNC4xNzUsMi42MDFjLTEuODEsMS41NDMgLTIuNjQsMi4yOTYgLTMuNDU3LDMuMTU0Yy0xLjIyNCwxLjI4NCAtMi4wODQsMi42OTcgLTIuMDg3LDMuNzFjMCwwLjMyNSAtMC4wNTMsMS4zNjUgMC4zNzEsMi4xODdjMC4xNiwwLjMwOSAwLjYxMywxLjMzOCAxLjk4LDIuMTA5YzAuODc0LDAuNDk0IDIuMTE5LDAuNjc1IDMuMzM3LDAuNTAxYzMuNzcyLC0wLjUzOCA4LjgyMywtMy43MzcgMTIuNDI3LC02LjcxNmMyLjI5NywtMS45IDMuOTc3LC0zLjczOSA0LjQ2MiwtNC42NDRjMC4zOSwtMC43MzEgMC40MzQsLTIuMDQzIDAuMjA3LC0yLjg2NmMtMC42NDUsLTIuMzM3IC01Ljg4NywtNy4xMjUgLTEwLjE3MiwtOS4wNTFhNy44MjQsNy44MjQgMCAwIDAgLTMuMjEyLC0wLjY1OHptLTAuMDA4LDAuMDY4YTcuNCw3LjQgMCAwIDEgMy4zNDQsMC43NTVjMy40NiwxLjcgOS4zMDgsNi40ODIgOS43MzksOC44ODZjMC41MzQsMi45NzIgLTkuOTMxLDExLjAxNyAtMTYuMjk3LDEyLjI3MmMtMi40NywwLjQ4NSAtNC41NzYsMC42MTggLTUuNTM3LC0xLjk5Yy0wLjgzMiwtMi4yNjIgMC43ODMsLTMuOTE2IDMuMTYsLTYuMDlhOTIuNTQ2LDkyLjU0NiAwIDAgMSAyLjk2LC0yLjU3NmMwLjA2NSwtMC4wNjkgLTUuNzA2LC0yLjA1OSAtNS44OSwtNC4zNDNjLTAuMTksLTIuMzQ4IDMuNTI3LC02LjY4MiA4LjI4NiwtNi45MDZjMC4wOCwtMC4wMDQgMC4xNTcsLTAuMDA3IDAuMjM1LC0wLjAwOHptLTAuMTEyLDAuNTJhNS42NDcsNS42NDcgMCAwIDAgLTAuNTA2LDAuMDMyYy0yLjMzNywwLjI0NSAtMi43ODUsMC41NDcgLTQuOTAzLDIuMTQ5Yy0wLjcxLDAuNTM3IC0yLjAxNiwxLjg0NCAtMi4zNSwzLjM5M2MtMC4xMjgsMC41OSAwLjAyNCwxLjEgMC40NDgsMS40NThjMS4zNiwxLjE0NCAzLjYzOSwyLjA3MiA1LjUwOSwyLjk3YzAuNTQ3LDAuMjYzIDAuMTg1LDAuNzQgLTAuNjk4LDEuNTA1Yy0yLjIyNywxLjkyOCAtNS4yNCw0LjI3NiAtNS40NSw2LjA2NmMtMC4wOTksMC44NDIgMC4xOSwxLjk4OCAxLjIxMywyLjU3NGMxLjE5NSwwLjY4NSAzLjY3NiwwLjIzOCA1LjMzMywtMC4zNzljMi40MjIsLTAuOTAyIDUuNjAyLC0yLjg5MiA4LjEyNywtNC44NDhjMi42MjUsLTIuMDM0IDUuMDY3LC00LjYxNyA1LjE4OCwtNS4wMzhjMC4xNDgsLTAuNTE3IDAuMTMzLC0wLjk5NiAtMC4xNTQsLTEuNTQ2Yy0wLjQ0OCwtMC44NjIgLTEuMDQ5LC0xLjUwMyAtMS42OTQsLTIuMjJjLTEuNzMyLC0xLjgyNSAtMy41NjMsLTMuNDMgLTUuNzU0LC00LjY1OGMtMS40MzUsLTAuODA0IC0yLjcxMiwtMS40ODIgLTQuMzA5LC0xLjQ1OHptMS4wNzUsMy42MjNjMC41NDYsMCAxLjE3NiwwLjE3MyAxLjg1MywwLjVjMS42ODgsMC44MTcgMy40MjIsMi45NjEgLTAuMDE1LDQuMTk1Yy0wLjkzNSwwLjMzNiAtMy45LC0wLjgyNCAtMy44MSwtMi40MDdjMC4wOSwtMS41NyAwLjg1NCwtMi4yODkgMS45NzIsLTIuMjg4em0wLjI4NSwxLjM2N2MtMC4zMTcsLTAuMDAyIC0wLjU3NSwwLjA3OSAtMC42OTQsMC4yNjNjLTAuNTU3LDAuODYxIC0wLjMwMywxLjQ3MiAwLjIxMiwxLjg2MmMwLjE5MiwtMC40NTcgMi4xNTYsMC4wNDMgMi4xNDgsMC40NzJhMC4zMiwwLjMyIDAgMCAwIDAuMDU1LC0wLjAzMmMxLjcwNCwtMS4yODIgLTAuNDcyLC0yLjU1NyAtMS43MiwtMi41NjVsLTAuMDAxLDB6IiBmaWxsPSIjNTQ0ODdhIiBpZD0ic3ZnXzEiLz4KIDwvZz4KPC9zdmc+' },
+		{ name: 'Artix-Logo', url: 'https://img.shields.io/badge/OS-Artix-9cf?style=for-the-badge&labelColor=E9E9E9&color=625BC7&logoColor=10A0CC&logo=data:image/svg%2bxml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogPHRpdGxlPkFydGl4IExpbnV4PC90aXRsZT4KCiA8ZyBjbGFzcz0ibGF5ZXIiPgogIDx0aXRsZT5MYXllciAxPC90aXRsZT4KICA8cGF0aCBkPSJtMTIsMGwtNC4xMjcsOC40NjJsMTEuMzU4LDYuMzYzbC03LjIzMSwtMTQuODI1em0tNS4zNzQsMTEuMDE4bC02LjMzMSwxMi45ODJsMTguNzg4LC03Ljc2MmwtMTIuNDU3LC01LjIyem0xMy44NDYsNi4zNTJsLTUuOTI2LDMuNDAybDkuMTYsMy4yMjhsLTMuMjM0LC02LjYzeiIgZmlsbD0iIzEwYTBjYyIgaWQ9InN2Z18xIi8+CiA8L2c+Cjwvc3ZnPg==' },
+		{ name: 'NeoVim-Logo', url: 'https://img.shields.io/badge/Editor-NeoVim-informational?style=for-the-badge&labelColor=E9E9E9&color=625BC7&logo=neovim' },
+		{ name: 'VSCodium-Logo', url: 'https://img.shields.io/badge/Editor-VSCodium-9cf?style=for-the-badge&labelColor=E9E9E9&color=625BC7&logoColor=007ACC&logo=visualstudiocode' }
 	],
 	certificateAccordion: [
 		{ show: n => `Certificates (${n} more)`, hide: 'Hide' },
@@ -106,26 +96,26 @@ export default {
 		['Название компетенции', 'Проверка LinkedIn', 'Предполагаемый уровень']
 	],
 	skills: [
-		[
+		[ // General knowledge
 			{ name: ['Object-Oriented Programming (OOP)', 'Programmation Orientée Objet (POO)', 'Objektorientierte Programmierung', 'Programación orientada a objetos (POO)', 'Programmazione orientata agli oggetti (OOP)', 'Объектно-ориентированное программирование (ООП)'], has_linked_badge: true, level: 90 },
 			{ name: ['Machine Learning', 'Apprentissage automatique', 'Maschinelles Lernen', 'Aprendizaje automático', 'Apprendimento automatico', 'Машинное обучение'], has_linked_badge: true, level: 85 },
 			{ name: ['Deep Learning', 'Apprentissage profond', 'Tiefes Lernen', 'Aprendizaje profundo', 'Apprendimento profondo', 'Глубокое обучение'], level: 90 },
-			{ name: ['Agile Method', 'Méthode Agile', 'Agile Methode', 'Método ágil', 'Metodo agile', 'Agile-метод'], level: 40 },
+			{ name: ['Agile Method', 'Méthode Agile', 'Agile Methode', 'Método ágil', 'Metodo agile', 'Agile-метод'], level: 50 },
 		],
-		[
-			{ name: 'Android', has_linked_badge: true, level: 70 },
-			{ name: 'Angular', has_linked_badge: true, level: 60 },
+		[ // Frameworks
+			{ name: 'Android', has_linked_badge: true, level: 75 },
+			{ name: 'Angular', has_linked_badge: true, level: 70 },
 			{ name: 'React.js', has_linked_badge: true, level: 85 },
 			{ name: 'VueJS', level: 70 },
 			{ name: 'Arduino', level: 80 },
-			{ name: 'PyTorch', level: 70 },
-			{ name: 'Tensorflow', level: 45 },
-			{ name: 'Keras', level: 60 },
+			{ name: 'PyTorch', level: 80 },
+			{ name: 'Tensorflow', level: 65 },
+			{ name: 'Keras', level: 80 },
 		],
-		[
+		[ // Languages
 			{ name: 'Bash', has_linked_badge: true, level: 80 },
 			{ name: 'C', has_linked_badge: true, level: 85 },
-			{ name: 'C++', has_linked_badge: true, level: 50 },
+			{ name: 'C++', has_linked_badge: true, level: 70 },
 			{ name: 'HTML', has_linked_badge: true, level: 90 },
 			{ name: 'Java', has_linked_badge: true, level: 90 },
 			{ name: 'JavaScript', has_linked_badge: true, level: 95 },
@@ -139,9 +129,9 @@ export default {
 			{ name: 'CSS', has_linked_badge: true, level: 50 },
 			{ name: 'Sass', level: 50 },
 		],
-		[
+		[ // Others
 			{ name: 'Git', has_linked_badge: true, level: 80 },
-			{ name: 'Linux', has_linked_badge: true, level: 60 },
+			{ name: 'Linux', has_linked_badge: true, level: 80 },
 			{ name: 'JSON', has_linked_badge: true, level: 95 },
 			{ name: 'Maven', has_linked_badge: true, level: 80 },
 			{ name: 'Docker', level: 90 },
