@@ -19,7 +19,10 @@
 					margin: 0 auto;
 					img {
 						margin: 0 auto;
-						height: 2.3vw;
+						height: 3.7vw;
+						@include media(">=tablet") {
+							height: 2.3vw;
+						}
 					}
 				}
 			}
