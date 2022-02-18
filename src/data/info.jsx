@@ -9,6 +9,8 @@ import QCMJump from './images/QCMJump.png';
 import SevenWonders from './images/7Wonders.jpg';
 import HBase from './images/HBase.png';
 import ProfilePicture from './images/profile_picture.jpg';
+import ViolaJones from './images/ViolaJones.png';
+import ScikitLearn from './images/scikit-learn.png';
 import { createLink } from '../toolbox';
 
 /* eslint import/no-anonymous-default-export: [2, {'allowObject': true}] */
@@ -16,11 +18,13 @@ export default {
 	name: 'Saunders Pierre',
 	languages: [{ name: 'English', code: 'GB' }, { name: 'Français', code: 'FR' }, { name: 'Deutsch', code: 'DE' }, { name: 'Español', code: 'ES' }, { name: 'Italiano', code: 'IT' }, { name: 'Россия', code: 'RU' }],
 	aboutImage: ProfilePicture,
+
 	social: [
 		{ name: 'GitHub', icon: FaGithub, url: 'https://github.com/saundersp' },
 		{ name: 'LinkedIn', icon: FaLinkedin, url: 'https://www.linkedin.com/in/pierre-saunders' },
 		{ name: 'Mail', icon: FaMailBulk, url: 'mailto:pierre.saundersgb@gmail.com' }
 	],
+
 	certificates: [
 		{ title: 'Artificial Intelligence A-Z Learn How To Build An AI', author: 'SuperDataScience Team' },
 		{ title: 'Machine Learning A-Z Hands-On Python & R In Data Science', author: 'SuperDataScience Team' },
@@ -30,6 +34,7 @@ export default {
 		{ title: 'Javascript ES6', author: 'K.Sathyaprakash Reddy' },
 		{ title: 'Music Theory Levels 1, 2 & 3', author: 'Jason Allen' }
 	],
+
 	menu: {
 		home: ['Home', 'Accueil', 'Startseite', 'Inicio', 'Casa', 'Главная'],
 		about: ['About', 'À propos', 'Über', 'Sobre', 'Circa', 'О нас'],
@@ -39,6 +44,7 @@ export default {
 		liveDemo: ['Live demo', 'Démo live', 'Live-Demo', 'Demostración en vivo', 'Dimostrazione dal vivo', 'Живая демонстрация'],
 		source: ['Source Code', 'Code Source', 'Quellcode', 'Código fuente', 'Codice sorgente', 'Исходный код'],
 		download_link: ['Download', 'Télécharger', 'Herunterladen', 'Descargar', 'Scaricare', 'Скачать'],
+		work_in_progress: ['Project in progress', 'Projet en cours', 'Laufendes Projekt', 'Proyecto en curso', 'Progetto in corso', 'Незавершенный проект'],
 		CV: ['Curriculum vitæ', 'Curriculum vitæ', 'Lebenslauf', 'Curriculum vitæ', 'Curriculum vitæ', 'Биографическая справка'],
 		credits: [
 			<>Made using React, {createLink('https://github.com/saundersp/portfolio', 'Source Code')}</>,
@@ -49,6 +55,7 @@ export default {
 			<>Веб-сайт, созданный с помощью React, {createLink('https://github.com/saundersp/portfolio', 'Исходный код')}</>
 		]
 	},
+
 	headerTagLine: [
 		"Hi 👋 You've found me!\nI am Saunders Pierre,\nan artificial intelligence enthusiast 🤖",
 		"Bonjour 👋 vous m'avez trouvé(e)!\nJe suis Saunders Pierre,\nun passionné d'intelligence artificielle 🤖",
@@ -57,6 +64,7 @@ export default {
 		"Ciao 👋 mi hai trovato!\nSono Pierre Saunders\nun appassionato di intelligenza artificiale 🤖",
 		"Привет 👋 ты нашел меня!\nЯ Пьер Сондерс.\nэнтузиаст искусственного интеллекта 🤖"
 	],
+
 	aboutText: [
 		<>Born in Frimley Park (GB), I always was curious and eager for knowledge in diverse fields. I am currently looking for funding for a PhD position in generative models. Music, swimming and cinema are hobbies that I love as much as programming.</>,
 		<>Né à Frimley Park (GB), j'ai toujours été curieux et avide de connaissances dans divers domaines. Je suis actuellement à la recherche de financement pour un poste de doctorant en modèles génératifs. La musique, la natation et le cinéma sont des loisirs que j'aime autant que la programmation.</>,
@@ -65,12 +73,14 @@ export default {
 		<>Nato a Frimley Park (Regno Unito), sono sempre stato curioso e desideroso di imparare in vari campi. Attualmente sto cercando finanziamenti per una posizione di dottorato in modelli generativi. La musica, il nuoto e il cinema sono hobby che mi piacciono tanto quanto la programmazione.</>,
 		<>Я родился в Фримли Парк (Великобритания), всегда был любознательным и стремился к знаниям в различных областях. В настоящее время я ищу финансирование на должность доктора философии в области генеративных моделей. Музыка, плавание и кино - хобби, которые мне нравятся не меньше, чем программирование.</>
 	],
+
 	badges: [
 		{ name: 'Gentoo-Logo', url: 'https://www.gentoo.org', src: 'https://img.shields.io/badge/OS-Gentoo-9cf?style=for-the-badge&labelColor=E9E9E9&color=625BC7&logoColor=54487A&logo=data:image/svg%2bxml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogPHRpdGxlPkdlbnRvbzwvdGl0bGU+CgogPGcgY2xhc3M9ImxheWVyIj4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBhdGggZD0ibTkuOTQsMGE3LjMxLDcuMzEgMCAwIDAgLTEuMjYsMC4xMTZjLTQuMzQ0LDAuNzk1IC03LjQsNC41NTUgLTcuNjYxLDcuMDMxYy0wLjEyNiwxLjIxNSAwLjUzLDIuMTI1IDAuODksMi41MjZjMC45NzcsMS4wODUgMi45MjQsMS45MTQgNC4xNzUsMi42MDFjLTEuODEsMS41NDMgLTIuNjQsMi4yOTYgLTMuNDU3LDMuMTU0Yy0xLjIyNCwxLjI4NCAtMi4wODQsMi42OTcgLTIuMDg3LDMuNzFjMCwwLjMyNSAtMC4wNTMsMS4zNjUgMC4zNzEsMi4xODdjMC4xNiwwLjMwOSAwLjYxMywxLjMzOCAxLjk4LDIuMTA5YzAuODc0LDAuNDk0IDIuMTE5LDAuNjc1IDMuMzM3LDAuNTAxYzMuNzcyLC0wLjUzOCA4LjgyMywtMy43MzcgMTIuNDI3LC02LjcxNmMyLjI5NywtMS45IDMuOTc3LC0zLjczOSA0LjQ2MiwtNC42NDRjMC4zOSwtMC43MzEgMC40MzQsLTIuMDQzIDAuMjA3LC0yLjg2NmMtMC42NDUsLTIuMzM3IC01Ljg4NywtNy4xMjUgLTEwLjE3MiwtOS4wNTFhNy44MjQsNy44MjQgMCAwIDAgLTMuMjEyLC0wLjY1OHptLTAuMDA4LDAuMDY4YTcuNCw3LjQgMCAwIDEgMy4zNDQsMC43NTVjMy40NiwxLjcgOS4zMDgsNi40ODIgOS43MzksOC44ODZjMC41MzQsMi45NzIgLTkuOTMxLDExLjAxNyAtMTYuMjk3LDEyLjI3MmMtMi40NywwLjQ4NSAtNC41NzYsMC42MTggLTUuNTM3LC0xLjk5Yy0wLjgzMiwtMi4yNjIgMC43ODMsLTMuOTE2IDMuMTYsLTYuMDlhOTIuNTQ2LDkyLjU0NiAwIDAgMSAyLjk2LC0yLjU3NmMwLjA2NSwtMC4wNjkgLTUuNzA2LC0yLjA1OSAtNS44OSwtNC4zNDNjLTAuMTksLTIuMzQ4IDMuNTI3LC02LjY4MiA4LjI4NiwtNi45MDZjMC4wOCwtMC4wMDQgMC4xNTcsLTAuMDA3IDAuMjM1LC0wLjAwOHptLTAuMTEyLDAuNTJhNS42NDcsNS42NDcgMCAwIDAgLTAuNTA2LDAuMDMyYy0yLjMzNywwLjI0NSAtMi43ODUsMC41NDcgLTQuOTAzLDIuMTQ5Yy0wLjcxLDAuNTM3IC0yLjAxNiwxLjg0NCAtMi4zNSwzLjM5M2MtMC4xMjgsMC41OSAwLjAyNCwxLjEgMC40NDgsMS40NThjMS4zNiwxLjE0NCAzLjYzOSwyLjA3MiA1LjUwOSwyLjk3YzAuNTQ3LDAuMjYzIDAuMTg1LDAuNzQgLTAuNjk4LDEuNTA1Yy0yLjIyNywxLjkyOCAtNS4yNCw0LjI3NiAtNS40NSw2LjA2NmMtMC4wOTksMC44NDIgMC4xOSwxLjk4OCAxLjIxMywyLjU3NGMxLjE5NSwwLjY4NSAzLjY3NiwwLjIzOCA1LjMzMywtMC4zNzljMi40MjIsLTAuOTAyIDUuNjAyLC0yLjg5MiA4LjEyNywtNC44NDhjMi42MjUsLTIuMDM0IDUuMDY3LC00LjYxNyA1LjE4OCwtNS4wMzhjMC4xNDgsLTAuNTE3IDAuMTMzLC0wLjk5NiAtMC4xNTQsLTEuNTQ2Yy0wLjQ0OCwtMC44NjIgLTEuMDQ5LC0xLjUwMyAtMS42OTQsLTIuMjJjLTEuNzMyLC0xLjgyNSAtMy41NjMsLTMuNDMgLTUuNzU0LC00LjY1OGMtMS40MzUsLTAuODA0IC0yLjcxMiwtMS40ODIgLTQuMzA5LC0xLjQ1OHptMS4wNzUsMy42MjNjMC41NDYsMCAxLjE3NiwwLjE3MyAxLjg1MywwLjVjMS42ODgsMC44MTcgMy40MjIsMi45NjEgLTAuMDE1LDQuMTk1Yy0wLjkzNSwwLjMzNiAtMy45LC0wLjgyNCAtMy44MSwtMi40MDdjMC4wOSwtMS41NyAwLjg1NCwtMi4yODkgMS45NzIsLTIuMjg4em0wLjI4NSwxLjM2N2MtMC4zMTcsLTAuMDAyIC0wLjU3NSwwLjA3OSAtMC42OTQsMC4yNjNjLTAuNTU3LDAuODYxIC0wLjMwMywxLjQ3MiAwLjIxMiwxLjg2MmMwLjE5MiwtMC40NTcgMi4xNTYsMC4wNDMgMi4xNDgsMC40NzJhMC4zMiwwLjMyIDAgMCAwIDAuMDU1LC0wLjAzMmMxLjcwNCwtMS4yODIgLTAuNDcyLC0yLjU1NyAtMS43MiwtMi41NjVsLTAuMDAxLDB6IiBmaWxsPSIjNTQ0ODdhIiBpZD0ic3ZnXzEiLz4KIDwvZz4KPC9zdmc+' },
 		{ name: 'Artix-Logo', url: 'https://artixlinux.org', src: 'https://img.shields.io/badge/OS-Artix-9cf?style=for-the-badge&labelColor=E9E9E9&color=625BC7&logoColor=10A0CC&logo=data:image/svg%2bxml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogPHRpdGxlPkFydGl4IExpbnV4PC90aXRsZT4KCiA8ZyBjbGFzcz0ibGF5ZXIiPgogIDx0aXRsZT5MYXllciAxPC90aXRsZT4KICA8cGF0aCBkPSJtMTIsMGwtNC4xMjcsOC40NjJsMTEuMzU4LDYuMzYzbC03LjIzMSwtMTQuODI1em0tNS4zNzQsMTEuMDE4bC02LjMzMSwxMi45ODJsMTguNzg4LC03Ljc2MmwtMTIuNDU3LC01LjIyem0xMy44NDYsNi4zNTJsLTUuOTI2LDMuNDAybDkuMTYsMy4yMjhsLTMuMjM0LC02LjYzeiIgZmlsbD0iIzEwYTBjYyIgaWQ9InN2Z18xIi8+CiA8L2c+Cjwvc3ZnPg==' },
 		{ name: 'NeoVim-Logo', url: 'https://neovim.io', src: 'https://img.shields.io/badge/Editor-NeoVim-informational?style=for-the-badge&labelColor=E9E9E9&color=625BC7&logo=neovim' },
 		{ name: 'VSCodium-Logo', url: 'https://vscodium.com', src: 'https://img.shields.io/badge/Editor-VSCodium-9cf?style=for-the-badge&labelColor=E9E9E9&color=625BC7&logoColor=007ACC&logo=visualstudiocode' }
 	],
+
 	certificateAccordion: [
 		{ show: n => `Certificates (${n} more)`, hide: 'Hide' },
 		{ show: n => `Certificats (${n} en plus)`, hide: 'Cacher' },
@@ -79,6 +89,7 @@ export default {
 		{ show: n => `Certificati (${n} in aggiunta)`, hide: 'Hide' },
 		{ show: n => `Сертификаты (${n} в дополнение)`, hide: 'Скрыть' }
 	],
+
 	skill_names: [
 		['General knowledge', 'Frameworks', 'Languages', 'Others'],
 		['Connaissances générales', 'Frameworks', 'Langages', 'Autres'],
@@ -87,6 +98,7 @@ export default {
 		['Conoscenza generale', 'Frameworks', 'Lingue', 'Altro'],
 		['Общие знания', 'Основы', 'Языки', 'Другое']
 	],
+
 	skills_table_titles: [
 		['Skill name', 'LinkedIn Validation', 'Estimated Level'],
 		['Nom Compétence', 'Validation LinkedIn', 'Niveau estimé'],
@@ -95,6 +107,7 @@ export default {
 		['Nome competenza', 'Convalida LinkedIn', 'Livello stimato'],
 		['Название компетенции', 'Проверка LinkedIn', 'Предполагаемый уровень']
 	],
+
 	skills: [
 		[ // General knowledge
 			{ name: ['Object-Oriented Programming (OOP)', 'Programmation Orientée Objet (POO)', 'Objektorientierte Programmierung', 'Programación orientada a objetos (POO)', 'Programmazione orientata agli oggetti (OOP)', 'Объектно-ориентированное программирование (ООП)'], has_linked_badge: true, level: 90 },
@@ -102,6 +115,7 @@ export default {
 			{ name: ['Deep Learning', 'Apprentissage profond', 'Tiefes Lernen', 'Aprendizaje profundo', 'Apprendimento profondo', 'Глубокое обучение'], level: 90 },
 			{ name: ['Agile Method', 'Méthode Agile', 'Agile Methode', 'Método ágil', 'Metodo agile', 'Agile-метод'], level: 50 },
 		],
+
 		[ // Frameworks
 			{ name: 'Android', has_linked_badge: true, level: 75 },
 			{ name: 'Angular', has_linked_badge: true, level: 70 },
@@ -112,15 +126,16 @@ export default {
 			{ name: 'Tensorflow', level: 65 },
 			{ name: 'Keras', level: 80 },
 		],
+
 		[ // Languages
 			{ name: 'Bash', has_linked_badge: true, level: 80 },
-			{ name: 'C', has_linked_badge: true, level: 85 },
-			{ name: 'C++', has_linked_badge: true, level: 70 },
+			{ name: 'C', has_linked_badge: true, level: 90 },
+			{ name: 'C++', has_linked_badge: true, level: 75 },
 			{ name: 'HTML', has_linked_badge: true, level: 90 },
 			{ name: 'Java', has_linked_badge: true, level: 90 },
 			{ name: 'JavaScript', has_linked_badge: true, level: 95 },
 			{ name: 'TypeScript', level: 85 },
-			{ name: 'Node.js', has_linked_badge: true, level: 60 },
+			{ name: 'Node.js', has_linked_badge: true, level: 70 },
 			{ name: 'NoSQL', has_linked_badge: true, level: 75 },
 			{ name: 'Python', has_linked_badge: true, level: 90 },
 			{ name: 'R', has_linked_badge: true, level: 60 },
@@ -129,6 +144,7 @@ export default {
 			{ name: 'CSS', has_linked_badge: true, level: 50 },
 			{ name: 'Sass', level: 50 },
 		],
+
 		[ // Others
 			{ name: 'Git', has_linked_badge: true, level: 80 },
 			{ name: 'Linux', has_linked_badge: true, level: 80 },
@@ -139,14 +155,17 @@ export default {
 			{ name: 'MongoDB', has_linked_badge: true, level: 70 },
 		],
 	],
+
+	projects_icons: ['🔬', '🏫', '🚀'],
 	projects_title: [
-		['Research projects 🔬', 'School projects 🏫', 'Personal projects 🚀'],
-		['Projets de recherche 🔬', 'Projets scolaires 🏫', 'Projets personnels 🚀'],
-		['Forschungsprojekte 🔬', 'Schulprojekte 🏫', 'Persönliche Projekte 🚀'],
-		['Proyectos de investigación 🔬', 'Proyectos escolares 🏫', 'Proyectos personales 🚀'],
-		["Progetti di ricerca 🔬", "Progetti scolastici 🏫", "Progetti personali 🚀"],
-		['Исследовательские проекты 🔬', 'Школьные проекты 🏫', 'Личные проекты 🚀']
+		['Research projects', 'School projects', 'Personal projects'],
+		['Projets de recherche', 'Projets scolaires', 'Projets personnels'],
+		['Forschungsprojekte', 'Schulprojekte', 'Persönliche Projekte'],
+		['Proyectos de investigación', 'Proyectos escolares', 'Proyectos personales'],
+		["Progetti di ricerca", "Progetti scolastici", "Progetti personali"],
+		['Исследовательские проекты', 'Школьные проекты', 'Личные проекты']
 	],
+
 	projects: [
 		[
 			{
@@ -164,6 +183,7 @@ export default {
 				imageIcon: FaTasks,
 				src: 'https://github.com/SemanticWebBenchmarker'
 			}
+
 		],	[
 			{
 				title: 'JeuDeGoIA',
@@ -180,7 +200,9 @@ export default {
 				imageSrc: JeuDeGoIAImage,
 				src: 'https://github.com/saundersp/JeuDeGoIA',
 				url: 'https://saundersp.github.io/JeuDeGoIA/'
-			}, {
+			},
+
+			{
 				title: 'ESP32Manager',
 				service: ['IoT / Machine learning', 'IoT / Apprentissage automatique', 'IoT / Maschinelles Lernen', 'IoT / Aprendizaje automático', 'IoT / Apprendimento automatico', 'IoT / Машинное обучение'],
 				desc: [
@@ -194,7 +216,9 @@ export default {
 				techs: ['VueJS', 'Arduino', 'Python', 'NodeJS', 'Scikit-Learn'],
 				imageSrc: 'https://raw.githubusercontent.com/saundersp/ESP32Manager/master/front/src/assets/logo.png',
 				src: 'https://github.com/saundersp/ESP32Manager'
-			}, {
+			},
+
+			{
 				title: 'EtudePopulationMondiale',
 				service: ['Data mining', 'Exploration de données', 'Data-Mining', 'Minería de datos', 'Estrazione di dati', 'Добыча данных'],
 				desc: [
@@ -209,7 +233,9 @@ export default {
 				imageSrc: EtudePopulationMondiale,
 				src: 'https://github.com/saundersp/EtudePopulationMondiale',
 				url: 'https://nbviewer.jupyter.org/github/saundersp/EtudePopulationMondiale/blob/master/Study%20on%20the%20evolution%20of%20the%20global%20population.ipynb'
-			}, {
+			},
+
+			{
 				title: 'HBaseMonitoring',
 				service: ['Database', 'Base de données', 'Datenbank', 'Base de datos', 'Database', 'База данных'],
 				desc: [
@@ -223,7 +249,9 @@ export default {
 				techs: ['Java', 'Maven'],
 				imageSrc: HBase,
 				src: 'https://github.com/ThomasGauci/HBaseProjet'
-			}, {
+			},
+
+			{
 				title: '7Wonders',
 				service: ['Video Game', 'Jeu vidéo', 'Videospiel', 'Videojuego', 'Gioco video', 'Видеоигра'],
 				desc: [
@@ -238,7 +266,9 @@ export default {
 				imageSrc: SevenWonders,
 				src: 'https://github.com/RemiFELIN/7Wonders_By_Miagestics',
 				download_url: 'https://github.com/RemiFELIN/7Wonders_By_Miagestics/archive/refs/tags/LivraisonFinale.zip'
-			}, {
+			},
+
+			{
 				title: 'QCMJump',
 				service: ['Video Game', 'Jeu vidéo', 'Videospiel', 'Videojuego', 'Gioco video', 'Видеоигра'],
 				desc: [
@@ -254,7 +284,38 @@ export default {
 				src: 'https://github.com/FulconisYan/QCMJump',
 				url: 'https://fulconisyan.github.io/QCMJump'
 			}
+
 		],	[
+			{
+				title: 'Scikit-Learn wannabe',
+				service: ['Machine Learning', 'Apprentissage automatique', 'Maschinelles Lernen', 'Aprendizaje automático', 'Apprendimento automatico', 'Машинное обучение'],
+				desc: [
+					'Implementation of several small widely used machine learning algorithms',
+					"Implémentation de plusieurs petits algorithmes d'apprentissage automatique largement utilisés",
+					'Implementierung mehrerer kleiner, weit verbreiteter Algorithmen für maschinelles Lernen',
+					'Implementación de varios algoritmos de aprendizaje automático de pequeño tamaño ampliamente utilizados',
+					'Implementazione di diversi piccoli algoritmi di apprendimento automatico ampiamente utilizzati',
+					'Реализация нескольких небольших широко используемых алгоритмов машинного обучения'
+				],
+				techs: ['Python'],
+				imageSrc: ScikitLearn
+			},
+
+			{
+				title: 'ViolaJones',
+				service: ['Face Recognition', 'Reconnaissance faciale', 'Gesichtserkennung', 'Reconocimiento facial', 'Riconoscimento facciale', 'Распознавание лиц'],
+				desc: [
+					'Implementation of the ViolaJones algorithm using GPU programmation',
+					"Implémentation de l'algorithme de ViolaJones en utilisant la programmation GPU",
+					'Implementierung des ViolaJones-Algorithmus mit GPU-Programmierung',
+					'Implementación del algoritmo ViolaJones mediante programación en la GPU',
+					"Implementazione dell'algoritmo ViolaJones usando la programmazione su GPU",
+					'Реализация алгоритма Виола-Джонса с помощью программирования на GPU'
+				],
+				techs: ['Python', 'C/C++', 'CUDA', 'Bash'],
+				imageSrc: ViolaJones
+			},
+
 			{
 				title: 'VAE',
 				service: ['Deep learning', 'Apprentissage profond', 'Tiefes Lernen', 'Aprendizaje profundo', 'Apprendimento profondo', 'Глубокое обучение'],
@@ -270,7 +331,9 @@ export default {
 				imageSrc: VAEImage,
 				src: 'https://github.com/saundersp/VariationalAutoEncoder',
 				url: 'https://nbviewer.jupyter.org/github/saundersp/VariationalAutoEncoder/blob/main/Variational%20Auto%20Encoder.ipynb'
-			}, {
+			},
+
+			{
 				title: 'WGAN-GP',
 				service: ['Deep learning', 'Apprentissage profond', 'Tiefes Lernen', 'Aprendizaje profundo', 'Apprendimento profondo', 'Глубокое обучение'],
 				desc: [
@@ -284,7 +347,9 @@ export default {
 				techs: ['Python', 'Tensorflow'],
 				imageSrc: WGANGPImage,
 				src: 'https://github.com/saundersp/wgan-gp'
-			}, {
+			},
+
+			{
 				title: 'FlappAI',
 				service: ['Genetic algorithm', 'Algorithme génétique', 'Genetischer Algorithmus', 'Algoritmo genético', 'Algoritmo genetico', 'Генетический алгоритм'],
 				desc: [
@@ -299,7 +364,9 @@ export default {
 				imageSrc: FlappyIAImage,
 				url: 'https://saundersp.github.io/FlappAI/',
 				src: 'https://github.com/saundersp/FlappAI'
-			}, {
+			},
+
+			{
 				title: 'SimpleGradientDescent',
 				service: ['Deep learning', 'Apprentissage profond', 'Tiefes Lernen', 'Aprendizaje profundo', 'Apprendimento profondo', 'Глубокое обучение'],
 				desc: [
@@ -314,7 +381,9 @@ export default {
 				imageSrc: GradientDescentImage,
 				src: 'https://github.com/saundersp/SimpleGradientDescent',
 				url: 'https://nbviewer.jupyter.org/github/saundersp/SimpleGradientDescent/blob/master/Linear%20Regression.ipynb'
-			}, {
+			},
+
+			{
 				title: 'ToolboxModule',
 				service: ['Javascript module', 'Module Javascript', 'Javascript-Modul', 'Módulo Javacsript', 'Modulo Javacsript', 'Модуль Javacsript'],
 				desc: [
@@ -328,7 +397,9 @@ export default {
 				techs: ['Javascript', 'NodeJS'],
 				imageIcon: FaToolbox,
 				src: 'https://github.com/saundersp/ToolboxModule'
-			}, {
+			},
+
+			{
 				title: 'MarioSokoban',
 				service: ['Video Game', 'Jeu vidéo', 'Videospiel', 'Videojuego', 'Gioco video', 'Видеоигра'],
 				desc: [
@@ -344,6 +415,7 @@ export default {
 				src: 'https://github.com/saundersp/MarioSokoban',
 				download_url: 'https://github.com/saundersp/MarioSokoban/releases/download/1.0/MarioSokoban.zip'
 			}
+
 			/*
 			{
 				title: '', // Title of the project

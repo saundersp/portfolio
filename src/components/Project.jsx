@@ -1,5 +1,5 @@
 import { createElement, useState } from 'react';
-import { FaGithub, FaRegPaperPlane, FaRegImage, FaDownload } from 'react-icons/fa';
+import { FaCode, FaRegPaperPlane, FaRegImage, FaDownload, FaLaptopCode } from 'react-icons/fa';
 import { Fade } from 'react-awesome-reveal';
 import '../scss/Project.scss';
 import { useLang } from '../services/LanguageService';
@@ -35,7 +35,8 @@ export default function Project({ project }) {
 				<ul className='links'>
 					{url && createLiElementLink(FaRegPaperPlane, url, t('menu.liveDemo'))}
 					{download_url && createLiElementLink(FaDownload, download_url, t('menu.download_link'))}
-					{src && createLiElementLink(FaGithub, src, t('menu.source'))}
+					{src && createLiElementLink(FaCode, src, t('menu.source'))}
+					{url == null && download_url == null && src == null && <li>{createElement(FaLaptopCode)} {t('menu.work_in_progress')}</li>}
 				</ul>
 			</div>
 		</Fade>
