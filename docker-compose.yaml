@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  no_ssl:
+    image: saundersp/portfolio_no_ssl
+    build:
+      dockerfile: Dockerfile.no_ssl
+    ports:
+      - 80:80
+
+  ssl:
+    image: saundersp/portfolio_ssl
+    build:
+      dockerfile: Dockerfile._ssl
+    ports:
+      - 443:443
