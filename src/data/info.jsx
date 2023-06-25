@@ -58,21 +58,21 @@ export default {
 	},
 
 	headerTagLine: [
-		"Hi 👋 You've found me!\nI am Saunders Pierre,\nan artificial intelligence enthusiast 🤖",
-		"Bonjour 👋 vous m'avez trouvé(e)!\nJe suis Saunders Pierre,\nun passionné d'intelligence artificielle 🤖",
-		"Hallo 👋 Sie haben mich gefunden!\nIch heiße Saunders Pierre\nein Enthusiast der künstlichen Intelligenz 🤖",
-		"Hola 👋 ¡Me has encontrado!\nSoy Pierre Saunders\nun entusiasta de la inteligencia artificial 🤖",
-		"Ciao 👋 mi hai trovato!\nSono Pierre Saunders\nun appassionato di intelligenza artificiale 🤖",
-		"Привет 👋 ты нашел меня!\nЯ Пьер Сондерс.\nэнтузиаст искусственного интеллекта 🤖"
+		"Hello 👋 you've found me!\nI'm Saunders Pierre,\na mathematics 📈, artificial intelligence 🤖 and quantum mechanics enthusiast ⚛️",
+		"Bonjour 👋 vous m'avez trouvé(e) !\nJe suis Saunders Pierre,\nun passionné de mathématiques 📈, d'intelligence artificielle 🤖 et de mécaniques quantiques ⚛️",
+		"Hallo 👋 Sie haben mich gefunden!\nIch bin Saunders Pierre,\nein leidenschaftlicher Anhänger der Mathematik 📈, der künstlichen Intelligenz 🤖 und der Quantenmechanik ⚛️",
+		"Hola 👋 ¡Me has encontrado!\nSoy Saunders Pierre,\nun entusiasta de las matemáticas 📈, la inteligencia artificial 🤖 y la mecánica cuántica ⚛️",
+		"Ciao 👋 Mi hai trovato!\nSono Saunders Pierre,\nun appassionato di matematica 📈, intelligenza artificiale 🤖 e meccanica quantistica ⚛️",
+		"Здравствуйте 👋 Вы нашли меня!\nЯ Сандерс Пьер,\nлюбитель математики 📈, искусственного интеллекта 🤖 и квантовой механики ⚛️."
 	],
 
 	aboutText: [
-		<>Born in Frimley Park (GB), I always was curious and eager for knowledge in diverse fields. I am currently looking for funding for a PhD position in generative models. Music, swimming and cinema are hobbies that I love as much as programming.</>,
-		<>Né à Frimley Park (GB), j'ai toujours été curieux et avide de connaissances dans divers domaines. Je suis actuellement à la recherche de financement pour un poste de doctorant en modèles génératifs. La musique, la natation et le cinéma sont des loisirs que j'aime autant que la programmation.</>,
-		<>Geboren in Frimley Park (GB), war ich schon immer neugierig und wissbegierig in verschiedenen Bereichen. Derzeit bin ich auf der Suche nach einer Finanzierung für eine Doktorandenstelle im Bereich generativer Modelle. Musik, Schwimmen und Kino sind Hobbys, die ich ebenso sehr liebe wie das Programmieren.</>,
-		<>Nacido en Frimley Park (Reino Unido), siempre he tenido curiosidad y ganas de aprender en diversos campos. Actualmente estoy buscando financiación para un puesto de doctorado en modelos generativos. La música, la natación y el cine son aficiones que me gustan tanto como la programación.</>,
-		<>Nato a Frimley Park (Regno Unito), sono sempre stato curioso e desideroso di imparare in vari campi. Attualmente sto cercando finanziamenti per una posizione di dottorato in modelli generativi. La musica, il nuoto e il cinema sono hobby che mi piacciono tanto quanto la programmazione.</>,
-		<>Я родился в Фримли Парк (Великобритания), всегда был любознательным и стремился к знаниям в различных областях. В настоящее время я ищу финансирование на должность доктора философии в области генеративных моделей. Музыка, плавание и кино - хобби, которые мне нравятся не меньше, чем программирование.</>
+		<>Né à Frimley Park 🇬🇧 (GB), j'ai toujours été curieux et avide de connaissances dans divers domaines tels que la mathématique 📈, l'intelligence artificielle 🤖 et de mécanique quantiques ⚛️. C’est pour cela que je cherche faire une thèse 📜 dans ces domaines pour intégrer le monde de la recherche. La musique 🎵, la natation 🏊 et le cinéma 🎥 sont des loisirs que j'aime autant que la programmation 🖦.</>,
+		<>Born in Frimley Park 🇬🇧 (UK), I've always been curious and eager to learn in various fields such as mathematics 📈, artificial intelligence 🤖 and quantum mechanics ⚛️. That's why I'm looking to do a thesis 📜 in these fields to get into the world of research. Music 🎵, swimming 🏊 and cinema 🎥 are hobbies that I enjoy as much as programming 🖦.</>,
+		<>Geboren in Frimley Park 🇬🇧 (GB), war ich schon immer neugierig und wissensdurstig in verschiedenen Bereichen wie Mathematik 📈, künstliche Intelligenz 🤖 und Quantenmechanik ⚛️. Deshalb versuche ich, eine Doktorarbeit 📜 in diesen Bereichen zu schreiben, um in die Welt der Forschung einzusteigen. Musik 🎵, Schwimmen 🏊 und Kino 🎥 sind Hobbys, die ich genauso liebe wie das Programmieren 🖦.</>,
+		<>Nacido en Frimley Park 🇬🇧 (GB), siempre he sido curioso y ávido de conocimientos en diversos campos como las matemáticas 📈, la inteligencia artificial 🤖 y la mecánica cuántica ⚛️. Por eso busco hacer una tesis 📜 en estos campos para adentrarme en el mundo de la investigación. La música 🎵, la natación 🏊 y el cine 🎥 son aficiones que me gustan tanto como programar 🖦.</>,
+		<>Nato a Frimley Park 🇬🇧 (GB), sono sempre stato curioso e desideroso di conoscenza in vari campi come la matematica 📈, l'intelligenza artificiale 🤖 e la meccanica quantistica ⚛️. Per questo sto cercando di fare una tesi 📜 in questi campi per entrare nel mondo della ricerca. La musica 🎵, il nuoto 🏊 e il cinema 🎥 sono hobby che mi piacciono tanto quanto la programmazione 🖦.</>,
+		<>Родился в городе Фримли Парк 🇬🇧 (Великобритания), я всегда был любопытен и стремился к знаниям в различных областях, таких как математика 📈, искусственный интеллект 🤖 и квантовая механика ⚛️. Поэтому я хочу написать диссертацию 📜 в этих областях, чтобы попасть в мир исследований. Музыка 🎵, плавание 🏊 и кино 🎥 - это хобби, которые мне нравятся не меньше, чем программирование 🖦.</>
 	],
 
 	badges: [
