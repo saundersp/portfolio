@@ -33,12 +33,11 @@
 				margin: 0 1.5vw 1vh 1.5vw;
 				border: 1px solid #00000038;
 				border-radius: 10%;
-				position: relative;
 				top: 0;
 				transition: top ease 0.5s;
 
 				&:hover {
-					top: -1vh;
+					background-color: #9352ae22;
 				}
 			}
 		}
@@ -49,19 +48,18 @@ div.footer {
 	padding: 0;
 	margin: -0.1em auto;
 	border-top: 1px solid black;
-	position: relative;
 	font-size: calc(16px + 0.1vw);
 	width: 50vw;
 	height: 3em;
+	left: calc(50% - 50vw + 0.1em);
+	//background-color: pink;
 
-	@include media(">=700px", "<=952px") {
-		left: 15vw;
+	@include media("<=952px") {
+		left: calc(50% - 27.5vw);
 		width: 55vw;
 	}
 
 	@include media("<=700px") {
-		left: 15vw;
-		width: 55vw;
 		font-size: calc(8px + 1vw);
 		margin-bottom: 3em;
 	}
