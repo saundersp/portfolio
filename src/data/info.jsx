@@ -11,6 +11,7 @@ import HBase from './images/HBase.png';
 import ProfilePicture from './images/profile_picture.jpg';
 import ViolaJones from './images/ViolaJones.png';
 import ScikitLearn from './images/scikit-learn.png';
+import SortingAlgorithms from './images/SortingAlgorithms.png';
 import { createLink } from '../toolbox';
 
 /* eslint import/no-anonymous-default-export: [2, {'allowObject': true}] */
@@ -299,6 +300,22 @@ export default {
 				],
 				techs: ['Python'],
 				imageSrc: ScikitLearn
+			},
+
+			{
+				title: 'Sorting algorithms',
+				service: ['Computational complexity theory', 'Théorie de la complexité', 'Komplexitätstheorie', 'Teoría de la complejidad', 'Teoria della complessità' , 'Теория сложности'],
+				desc: [
+					'Implementation of several sorting algorithms of diverse complexity',
+					'Implémentation de plusieurs algorithmes de tri de compléxités diverses',
+					'Implementierung mehrerer Sortieralgorithmen mit unterschiedlicher Vollständigkeit',
+					'Aplicación de varios algoritmos de ordenación de distinta complejidad',
+					'Implementazione di diversi algoritmi di ordinamento con diverse complessità',
+					'Реализация нескольких алгоритмов сортировки с различной сложностью'
+				],
+				techs: ['C/C++'],
+				imageSrc: SortingAlgorithms,
+				src: 'https://git.saundersp.com/saundersp/sorting_algorithms'
 			},
 
 			{
