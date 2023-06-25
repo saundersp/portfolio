@@ -333,7 +333,8 @@ export default {
 					'Реализация алгоритма Виола-Джонса с помощью программирования на GPU'
 				],
 				techs: ['Python', 'C/C++', 'CUDA', 'Bash'],
-				imageSrc: ViolaJones
+				imageSrc: ViolaJones,
+				src: 'https://git.saundersp.com/saundersp/ViolaJones'
 			},
 
 			{
