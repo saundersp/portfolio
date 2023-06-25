@@ -1,6 +1,6 @@
 # Portfolio
 
-_Dies in anderen Sprachen lesen: [English](README.md), [Français](README.fr.md)_
+_Dies in anderen Sprachen lesen: [English](README.md), [Français](README.fr.md), [Español](README.es.md), [Italiano](README.it.md), [Россия](README.ru.md)_
 
 Erstellt mit React
 

@@ -1,6 +1,6 @@
 # Portfolio
 
-_Lisez ceci dans d'autres langues: [English](README.md), [Deutsch](README.ge.md)_
+_Lisez ceci dans d'autres langues: [English](README.md), [Deutsch](README.de.md), [Español](README.es.md), [Italiano](README.it.md), [Россия](README.ru.md)_
 
 Réalisé avec React
 
