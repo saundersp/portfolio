@@ -15,7 +15,7 @@ import { createLink } from '../toolbox';
 
 /* eslint import/no-anonymous-default-export: [2, {'allowObject': true}] */
 export default {
-	name: 'Saunders Pierre',
+	name: ['Saunders Pierre', 'Saunders Pierre', 'Saunders Pierre', 'Saunders Pierre', 'Saunders Pierre', 'Пьер Сондерс'],
 	languages: [{ name: 'English', code: 'GB' }, { name: 'Français', code: 'FR' }, { name: 'Deutsch', code: 'DE' }, { name: 'Español', code: 'ES' }, { name: 'Italiano', code: 'IT' }, { name: 'Россия', code: 'RU' }],
 	aboutImage: ProfilePicture,
 

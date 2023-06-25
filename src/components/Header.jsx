@@ -4,8 +4,6 @@ import { Link } from 'react-scroll';
 import '../scss/Header.scss';
 import { useLang } from '../services/LanguageService';
 import Navbar from './Navbar';
-import info from '../data/info';
-const { name } = info;
 
 export default function Header({ menu }) {
 	const { t } = useLang();
@@ -16,7 +14,7 @@ export default function Header({ menu }) {
 			</div>
 			<header>
 				<h1><Fade direction="left" duration={200} cascade triggerOnce>
-					{name}
+					{t('name')}
 				</Fade></h1>
 				<Navbar menu={menu} />
 			</header>
