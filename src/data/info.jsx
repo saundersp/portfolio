@@ -116,7 +116,9 @@ export default {
 			{ name: ['Object-Oriented Programming (OOP)', 'Programmation Orientée Objet (POO)', 'Objektorientierte Programmierung', 'Programación orientada a objetos (POO)', 'Programmazione orientata agli oggetti (OOP)', 'Объектно-ориентированное программирование (ООП)'], has_linked_badge: true, level: 90 },
 			{ name: ['Machine Learning', 'Apprentissage automatique', 'Maschinelles Lernen', 'Aprendizaje automático', 'Apprendimento automatico', 'Машинное обучение'], has_linked_badge: true, level: 85 },
 			{ name: ['Deep Learning', 'Apprentissage profond', 'Tiefes Lernen', 'Aprendizaje profundo', 'Apprendimento profondo', 'Глубокое обучение'], level: 90 },
-			{ name: ['Agile Method', 'Méthode Agile', 'Agile Methode', 'Método ágil', 'Metodo agile', 'Agile-метод'], level: 50 },
+			{ name: ['Agile Method', 'Méthode Agile', 'Agile Methode', 'Método ágil', 'Metodo agile', 'Agile-метод'], has_linked_badge: true, level: 50 },
+			{ name: ['Front-end Development', 'Développement Front-End', 'Front-End-Entwicklung', 'Desarrollo front-end', 'Sviluppo front-end', 'Front-end разработка'], has_linked_badge: true, level: 90 },
+			{ name: ['Cybersecurity', 'Cybersécurité', 'Cybersicherheit', 'Sicurezza informatica', 'Sicurezza informatica', 'Кибербезопасность'], has_linked_badge: true, level: 70 },
 		],
 
 		[ // Frameworks
