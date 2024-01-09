@@ -1,6 +1,6 @@
 import { FaToolbox, FaTasks, FaGithub, FaLinkedin, FaMailBulk } from 'react-icons/fa';
 import FlappyIAImage from './images/FlappyIA.png';
-import JeuDeGoIAImage from './images/JeuDeGoIA.png';
+import OthelloIAImage from './images/OthelloIA.png';
 import GradientDescentImage from './images/GradientDescent.png';
 import WGANGPImage from './images/WGANGP.png';
 import VAEImage from './images/VAE.png';
@@ -192,20 +192,20 @@ export default {
 
 		],	[
 			{
-				title: 'JeuDeGoIA',
+				title: 'OthelloIA',
 				service: ['MiniMax', 'MiniMax', 'MiniMax', 'MiniMax', 'MiniMax', 'Minimax'],
 				desc: [
-					'Implementation of an AI playing Go',
-					"Implémentation d'une IA jouant au jeu de Go",
-					'Implementierung einer Go spielenden KI',
-					'Implementación de una IA que juega al Go',
-					'Implementazione di una IA che gioca al gioco del Go',
-					'Реализация искусственного интеллекта, играющего в го'
+					'Implementation of an AI playing Othello',
+					"Implémentation d'une IA jouant au jeu d'Othello",
+					'Implementierung einer Othello spielenden KI',
+					'Implementación de una IA que juega a Otelo',
+					'Implementazione di una IA che gioca a Otello',
+					'Реализация искусственного интеллекта, играющего в Отелло'
 				],
 				techs: ['HTML', 'CSS', 'Javascript'],
-				imageSrc: JeuDeGoIAImage,
-				src: 'https://github.com/saundersp/JeuDeGoIA',
-				url: 'https://saundersp.github.io/JeuDeGoIA/'
+				imageSrc: OthelloIAImage,
+				src: 'https://github.com/saundersp/OthelloIA',
+				url: 'https://saundersp.github.io/OthelloIA/'
 			},
 
 			{
