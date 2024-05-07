@@ -1,5 +1,3 @@
-version: "2.0"
-
 services:
   no_ssl:
     image: saundersp/portfolio_no_ssl
