@@ -1,6 +1,0 @@
-node_modules
-build
-*.md
-Dockerfile._ssl
-Dockerfile.no_ssl
-.*
