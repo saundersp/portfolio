@@ -1,6 +1,7 @@
 services:
   no_ssl:
     image: saundersp/portfolio_no_ssl
+    pull_policy: never
     build:
       dockerfile: Dockerfile.no_ssl
     ports:
@@ -8,6 +9,7 @@ services:
 
   ssl:
     image: saundersp/portfolio_ssl
+    pull_policy: never
     build:
       dockerfile: Dockerfile._ssl
     ports:
