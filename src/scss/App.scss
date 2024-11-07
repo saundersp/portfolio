@@ -1,4 +1,4 @@
-@import '../breakpoints.scss';
+@use '../breakpoints';
 
 @font-face {
 	font-family : 'Hasklug';
@@ -47,7 +47,7 @@ body {
 // Empty per default
 //.show-mobile {}
 
-@include media('>=tablet') {
+@include breakpoints.media('>=tablet') {
 
 	.show-mobile {
 		display: none;

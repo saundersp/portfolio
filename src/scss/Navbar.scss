@@ -1,4 +1,4 @@
-@import '../breakpoints.scss';
+@use '../breakpoints';
 
 nav {
 	padding: 0;
@@ -116,7 +116,7 @@ nav {
 	}
 }
 
-@include media(">=tablet") {
+@include breakpoints.media(">=tablet") {
 	nav ul {
 		position: relative;
 		background-color: initial;
@@ -168,7 +168,7 @@ nav {
 	}
 }
 
-@include media(">=desktop") {
+@include breakpoints.media(">=desktop") {
 	nav ul li.langs {
 		top: -1.2em;
 	}

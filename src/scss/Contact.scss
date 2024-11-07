@@ -1,4 +1,4 @@
-@import '../breakpoints.scss';
+@use '../breakpoints';
 
 .contact {
 	margin-top: 8vh;
@@ -54,12 +54,12 @@ div.footer {
 	left: calc(50% - 50vw + 0.1em);
 	//background-color: pink;
 
-	@include media("<=952px") {
+	@include breakpoints.media("<=952px") {
 		left: calc(50% - 27.5vw);
 		width: 55vw;
 	}
 
-	@include media("<=700px") {
+	@include breakpoints.media("<=700px") {
 		font-size: calc(8px + 1vw);
 		margin-bottom: 3em;
 	}
