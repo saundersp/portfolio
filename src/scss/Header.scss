@@ -19,14 +19,15 @@
 			position: fixed;
 			font-size: calc(15px + 0.9em);
 			top: 30%;
-			@include breakpoints.media("<=700px"){
-				top: 40%;
-				font-size: calc(15px + 0.7em);
-			}
 			left: 50%;
 			transform: translate(-50%, -50%);
 			width: 100%;
 			text-align: center;
+
+			@include breakpoints.media("<=700px"){
+				top: 40%;
+				font-size: calc(15px + 0.7em);
+			}
 		}
 	}
 
