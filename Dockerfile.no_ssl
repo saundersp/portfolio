@@ -1,4 +1,4 @@
-FROM node:23.3.0-alpine3.20 AS builder
+FROM node:23.4.0-alpine3.20 AS builder
 
 WORKDIR /home/saundersp/portfolio
 
@@ -6,9 +6,9 @@ COPY public public
 COPY src src
 COPY package.json package-lock.json ./
 
-RUN npm i && npm run build && rm -rv node_modules
+RUN npm i && npm run build && rm -r node_modules
 
-FROM node:23.3.0-alpine3.20
+FROM node:23.4.0-alpine3.20
 
 RUN npm i -g http-server
 
