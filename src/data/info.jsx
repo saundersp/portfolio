@@ -75,15 +75,6 @@ export default {
 		<>Родился в городе Фримли Парк 🇬🇧 (Великобритания), я всегда был любопытен и стремился к знаниям в различных областях, таких как математика 📈, искусственный интеллект 🤖 и квантовая механика ⚛️. Поэтому я хочу написать диссертацию 📜 в этих областях, чтобы попасть в мир исследований. Музыка 🎵, плавание 🏊 и кино 🎥 - это хобби, которые мне нравятся не меньше, чем программирование 🖦.</>
 	],
 
-	badges: [
-		{ name: 'Gentoo-Logo', url: 'https://www.gentoo.org', src: 'https://img.shields.io/badge/OS-Gentoo-9cf?style=for-the-badge&labelColor=E9E9E9&color=54487A&logoColor=54487A&logo=gentoo' },
-		// { name: 'Artix-Logo', url: 'https://artixlinux.org', src: 'https://img.shields.io/badge/OS-Artix-9cf?style=for-the-badge&labelColor=E9E9E9&color=10A0CC&logo=artixlinux' },
-		{ name: 'NeoVim-Logo', url: 'https://neovim.io', src: 'https://img.shields.io/badge/Editor-NeoVim-informational?style=for-the-badge&labelColor=E9E9E9&color=57A143&logo=neovim' },
-		// { name: 'VSCodium-Logo', url: 'https://vscodium.com', src: 'https://img.shields.io/badge/Editor-VSCodium-9cf?style=for-the-badge&labelColor=E9E9E9&color=2F80ED&logoColor=2F80ED&logo=visualstudiocode' },
-		// { name: 'RaspberryPI-logo', url: 'https://www.raspberrypi.com', src: 'https://img.shields.io/badge/Embedded-RaspberryPI-informational?style=for-the-badge&labelColor=E9E9E9&color=A22846&logoColor=A22846&logo=raspberrypi' },
-		{ name: 'Espressif-logo', url: 'https://www.espressif.com', src: 'https://img.shields.io/badge/Embedded-Espressif-informational?style=for-the-badge&labelColor=E9E9E9&color=E7352C&logo=espressif' }
-	],
-
 	certificateAccordion: [
 		{ show: n => `Certificates (${n} more)`, hide: 'Hide' },
 		{ show: n => `Certificats (${n} en plus)`, hide: 'Cacher' },

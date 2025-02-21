@@ -11,22 +11,6 @@
 
 	.about-content {
 		.description {
-			.badges {
-				padding-bottom: 15px;
-				display: flex;
-
-				a {
-					margin: 0 auto;
-					img {
-						margin: 0 auto;
-						height: 3.7vw;
-						@include breakpoints.media(">=tablet") {
-							height: 2.3vw;
-						}
-					}
-				}
-			}
-
 			button.showAllCertificates {
 				margin-bottom: 2vh;
 				width: 100%;
