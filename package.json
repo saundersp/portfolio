@@ -10,7 +10,7 @@
 		"react-icons": "^5.5.0",
 		"react-scripts": "^5.0.1",
 		"react-scroll": "^1.9.3",
-		"sass": "^1.85.0"
+		"sass": "^1.85.1"
 	},
 	"scripts": {
 		"preinstall": "npx npm-force-resolutions",
